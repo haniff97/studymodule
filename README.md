@@ -8,8 +8,6 @@
 
 **SmartBrain DPLI** ialah platform pembelajaran digital komprehensif yang direka khas untuk pelajar **Diploma Pascasiswazah Pendidikan (DPLI)** dan program Pascasiswazah **Open University Malaysia (OUM)**. Platform ini menggabungkan bank contoh tugasan lengkap, nota padat interaktif, simulator peperiksaan bermasa, dan permainan arked pendidikan dalam satu ekosistem moden yang responsif.
 
-🌐 **Akses Dalam Talian (Live Demo):** [https://sbdpli.loophole.site](https://sbdpli.loophole.site)
-
 ---
 
 ## 🌟 Modul & Ciri-Ciri Utama
