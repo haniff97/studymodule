@@ -1332,15 +1332,19 @@
 
 @media (max-width: 500px) {
   .landing-nav {
-    padding: 8px 12px;
+    padding: 6px 8px;
   }
 
   .ln-logo-text {
-    font-size: 15px;
+    display: none;
+  }
+
+  .ln-right {
+    gap: 6px;
   }
 
   .ln-btn-login {
-    padding: 8px;
+    padding: 6px;
   }
 
   .ln-btn-login span {
@@ -1348,7 +1352,7 @@
   }
 
   .ln-btn-signup {
-    padding: 8px;
+    padding: 6px;
   }
   
   .ln-btn-signup span {
