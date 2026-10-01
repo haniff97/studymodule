@@ -1,0 +1,209 @@
+/* --- Tips Page Hero --- */
+.hero-tips {
+  background: var(--pop-purple) !important;
+  color: #1e2227 !important;
+  border-radius: 24px;
+  border: 1.5px solid #1e2227 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+/* --- Tip of the Day Featured Card --- */
+.tip-featured-card {
+  background: var(--pop-yellow);
+  border: 1.5px solid #1e2227;
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 26px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+.tfc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1.5px solid #1e2227;
+  color: #1e2227;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+.tfc-badge i { font-size: 14px; }
+.tfc-body {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.tfc-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1.5px solid #1e2227;
+  color: #1e2227;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tfc-icon-wrap i { font-size: 24px; }
+.tfc-content { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.tfc-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1e2227;
+  margin: 0;
+}
+.tfc-message {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #1e2227;
+  opacity: 0.85;
+  margin: 0;
+}
+.tfc-action {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1.5px solid #1e2227;
+  color: #1e2227;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.tfc-action i { font-size: 16px; color: #1e2227; flex-shrink: 0; margin-top: 1px; }
+
+/* --- 6 Tips Grid --- */
+.tips-section { margin-bottom: 30px; }
+.tips-shuffle-link {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+}
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.tip-card-styled {
+  background: var(--card);
+  border: 1.5px solid #1e2227;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.15s;
+}
+.tip-card-styled:hover {
+  transform: translateY(-2px);
+  background: var(--pop-blue);
+}
+.tc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+.tc-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--card-2);
+  border: 1.5px solid transparent;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tip-card-styled:hover .tc-icon-wrap {
+  background: #ffffff;
+  border: 1.5px solid #1e2227;
+  color: #1e2227;
+}
+.tc-icon-wrap i { font-size: 20px; }
+.tc-idx {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text);
+  background: var(--card-2);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+}
+.tip-card-styled:hover .tc-idx {
+  background: #ffffff;
+  color: #1e2227;
+  border: 1.5px solid #1e2227;
+}
+.tc-card-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.35;
+}
+.tc-card-message {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0;
+  flex: 1;
+}
+.tip-card-styled:hover .tc-card-title,
+.tip-card-styled:hover .tc-card-message {
+  color: #1e2227;
+}
+.tc-action-tip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1.5px solid transparent;
+}
+.tip-card-styled:hover .tc-action-tip {
+  color: #1e2227;
+  border-top: 1.5px solid rgba(30, 34, 39, 0.1);
+}
+.tc-action-tip i { font-size: 14px; }
+
+
+/* Mobile Media Queries */
+@media (max-width: 768px) {
+  .tips-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .tfc-body {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .tip-featured-card {
+    padding: 16px !important;
+    margin-bottom: 20px !important;
+    border-radius: 14px !important;
+  }
+  .tip-card-styled {
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+}

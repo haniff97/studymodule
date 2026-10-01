@@ -1,0 +1,11 @@
+{
+  "name": "SmartBrain DPLI",
+  "short_name": "SmartBrain DPLI",
+  "description": "SmartBrain DPLI · Platform Kajian Interaktif, Nota & Peperiksaan",
+  "lang": "ms",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1c1c21",
+  "theme_color": "#1c1c21",
+  "icons": []
+}

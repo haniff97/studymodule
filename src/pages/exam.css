@@ -1,0 +1,240 @@
+/* Exam Hub Styles */
+.hero-exam {
+  background: var(--pop-blue) !important;
+  color: #1e2227 !important;
+  border-radius: 24px;
+  border: 1.5px solid #1e2227 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  margin-bottom: 24px;
+}
+
+.exam-section { margin-bottom: 24px; }
+
+.exam-sec-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* Mod Peperiksaan: 2 side-by-side cards */
+.mode-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.mode-card-styled {
+  background: var(--card);
+  border: 1.5px solid #1e2227;
+  border-radius: 20px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s;
+}
+.mode-card-styled:hover {
+  transform: translateY(-2px);
+}
+.mode-card-styled.active {
+  border-color: #1e2227;
+  background: var(--pop-purple);
+}
+.mode-card-styled .mc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mode-card-styled .mc-icon {
+  font-size: 24px;
+  color: var(--text);
+}
+.mode-card-styled .mc-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--card-2);
+  border: 1.5px solid transparent;
+  color: var(--text);
+}
+.mode-card-styled.active .mc-badge {
+  background: #ffffff;
+  color: #1e2227;
+  border: 1.5px solid #1e2227;
+}
+.mode-card-styled .mc-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+}
+.mode-card-styled .mc-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+.mode-card-styled.active .mc-icon,
+.mode-card-styled.active .mc-title,
+.mode-card-styled.active .mc-desc {
+  color: #1e2227;
+}
+
+/* Subjek List: 3 stacked rows */
+.subj-rows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.subj-row-card {
+  background: var(--card);
+  border: 1.5px solid #1e2227;
+  border-radius: 20px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.subj-row-card:hover { transform: translateY(-1px); }
+.subj-row-card.active {
+  border-color: #1e2227;
+  background: var(--pop-yellow);
+}
+.subj-row-card .src-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--card-2);
+  border: 1.5px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  flex-shrink: 0;
+}
+.subj-row-card.active .src-icon {
+  background: #ffffff;
+  color: #1e2227;
+  border: 1.5px solid #1e2227;
+}
+.subj-row-card .src-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+.subj-row-card .src-code {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text);
+}
+.subj-row-card .src-title {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.subj-row-card .src-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--card-2);
+  border: 1.5px solid transparent;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+.subj-row-card.active .src-badge {
+  background: #ffffff;
+  color: #1e2227;
+  border: 1.5px solid #1e2227;
+}
+.subj-row-card.active .src-code,
+.subj-row-card.active .src-title {
+  color: #1e2227;
+}
+
+/* Set Soalan Selection & Start Button */
+.sets-grid-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.set-tile {
+  background: var(--card);
+  border: 1.5px solid #1e2227;
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.15s;
+}
+.set-tile:hover {
+  background: var(--card-2);
+  transform: translateX(4px);
+}
+.set-tile.active {
+  background: var(--pop-purple);
+  border-color: #1e2227;
+  color: #1e2227;
+}
+.set-tile .st-left { display: flex; align-items: center; gap: 10px; }
+.set-tile .st-left i { color: var(--pop-blue); font-size: 20px; transition: all 0.15s; }
+.set-tile.active .st-left i { color: #1e2227; }
+.set-tile .st-count { font-size: 12px; color: var(--text-secondary); transition: all 0.15s; }
+.set-tile.active .st-count { color: #1e2227; }
+
+.exam-start-btn {
+  background: var(--pop-purple);
+  color: #1e2227;
+  border: 1.5px solid #1e2227;
+  border-radius: 14px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 14px;
+  transition: all 0.15s;
+}
+.exam-start-btn:hover {
+  background: #b895ff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .hero-strip { flex-direction: column; align-items: stretch; gap: 14px; padding: 18px 16px; border-radius: 16px; margin-bottom: 20px; }
+  .hero-strip-text h1 { font-size: 18px; }
+  .hero-strip-text p { font-size: 12px; }
+  .hero-strip-stats { display: flex; width: 100%; justify-content: space-around; border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 12px; }
+  .hs-stat strong { font-size: 20px; }
+  .mode-grid-2col { grid-template-columns: 1fr; gap: 10px; }
+  .mode-card-styled { padding: 14px 16px; border-radius: 12px; }
+  .subj-row-card { padding: 12px 14px; gap: 10px; border-radius: 12px; }
+  .subj-row-card .src-icon { width: 32px; height: 32px; border-radius: 8px; }
+  .subj-row-card .src-code { font-size: 13px; }
+  .subj-row-card .src-title { font-size: 11px; }
+  .subj-row-card .src-badge { font-size: 11px; padding: 3px 8px; }
+  .set-tile { padding: 10px 14px; font-size: 13px; }
+  .exam-start-btn { padding: 12px 20px; font-size: 14px; border-radius: 10px; }
+}
+
+
+

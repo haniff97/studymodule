@@ -1,0 +1,518 @@
+.progress-block { margin-bottom: 20px; }
+.pb-top { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.pb-top .uppercase { color: inherit; }
+.pb-bar { height: 8px; background: var(--card-2); border-radius: 999px; overflow: hidden; }
+.pb-fill { height: 100%; background: var(--primary); }
+
+.page-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+.ph-icon { font-size: 42px; }
+.page-head h2 { font-size: 24px; margin: 4px 0; }
+
+.topic-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+.tn-chip {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.tn-chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.note-section { margin-bottom: 20px; }
+.section-h { font-size: 15px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); }
+.note-section p { line-height: 1.7; color: var(--text); }
+.note-section p.muted { color: var(--muted); }
+
+.focus-box { border-left: 4px solid var(--warning); }
+
+.progress-box .pb-bar { margin-top: 6px; }
+
+/* ==========================================================================
+   Modern Interactive Notes (Accordion Cards & Reading Controls)
+   ========================================================================== */
+
+.notes-container {
+  margin-bottom: 32px;
+  transition: font-size 0.2s ease;
+}
+
+/* Reading Toolbar */
+.notes-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+}
+
+.nt-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nt-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted, #94a3b8);
+  margin-right: 2px;
+}
+
+.nt-btn {
+  background: rgba(30, 41, 59, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nt-btn:hover {
+  background: rgba(51, 65, 85, 0.9);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.nt-btn.active {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #34d399;
+}
+
+.nt-toggle {
+  font-size: 12px;
+  padding: 5px 14px;
+}
+
+/* Accordion Cards */
+.notes-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+details.edu-accordion {
+  background: rgba(26, 29, 39, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+details.edu-accordion[open] {
+  background: rgba(26, 29, 43, 0.95);
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.15);
+}
+
+details.edu-accordion summary.accordion-summary {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  outline: none;
+}
+
+details.edu-accordion summary.accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.accordion-num-badge {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 8px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.accordion-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+}
+
+.accordion-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #60a5fa;
+  white-space: nowrap;
+}
+
+.chevron-icon {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  color: #94a3b8;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+}
+
+details.edu-accordion[open] .chevron-icon {
+  transform: rotate(180deg);
+  color: #10b981;
+}
+
+/* Accordion Content Area */
+.accordion-content {
+  padding: 18px 22px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.edu-bold {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.edu-italic {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.edu-p {
+  margin: 0 0 14px 0;
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+
+.edu-p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+.edu-list {
+  margin: 10px 0 16px 0;
+  padding-left: 18px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edu-list li {
+  position: relative;
+  padding-left: 18px;
+  color: #e2e8f0;
+  line-height: 1.65;
+}
+
+.edu-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  color: #10b981;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.edu-num-list {
+  margin: 10px 0 16px 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #e2e8f0;
+}
+
+.edu-num-list li {
+  line-height: 1.65;
+}
+
+/* Tables */
+.table-responsive {
+  overflow-x: auto;
+  margin: 18px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.edu-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  text-align: left;
+}
+
+.edu-table th {
+  background: rgba(30, 41, 59, 0.95);
+  color: #f8fafc;
+  padding: 12px 16px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.edu-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  vertical-align: top;
+}
+
+.edu-table tr:last-child td {
+  border-bottom: none;
+}
+
+.edu-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Callout Boxes */
+.callout-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  margin: 16px 0;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.callout-box.concept {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.callout-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #34d399;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.callout-body {
+  color: #e2e8f0;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+/* Focus Exam Accordion */
+details.edu-accordion.focus-accordion {
+  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(35, 26, 15, 0.3);
+}
+
+details.edu-accordion.focus-accordion[open] {
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 8px 24px -6px rgba(245, 158, 11, 0.2);
+}
+
+.accordion-num-badge.gold {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #f59e0b;
+}
+
+.accordion-tag.gold {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+
+/* Sub-accordion inside notes */
+details.edu-sub-accordion {
+  margin: 14px 0;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+details.edu-sub-accordion summary {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #38bdf8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+details.edu-sub-accordion .accordion-content {
+  padding: 14px 16px;
+  font-size: 13.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================================================
+   Light Mode Overrides for Interactive Notes
+   ========================================================================== */
+
+[data-theme="light"] .notes-toolbar {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .nt-label {
+  color: #64748b;
+}
+
+[data-theme="light"] .nt-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+}
+
+[data-theme="light"] .nt-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+[data-theme="light"] .nt-btn.active {
+  background: #d1fae5;
+  border-color: #6ee7b7;
+  color: #047857;
+}
+
+[data-theme="light"] details.edu-accordion {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] details.edu-accordion[open] {
+  background: #ffffff;
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.1);
+}
+
+[data-theme="light"] .accordion-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .accordion-content {
+  border-top-color: #f1f5f9;
+  color: #334155;
+}
+
+[data-theme="light"] .edu-bold {
+  color: #0f172a;
+}
+
+[data-theme="light"] .edu-italic {
+  color: #64748b;
+}
+
+[data-theme="light"] .edu-p {
+  color: #334155;
+}
+
+[data-theme="light"] .edu-list li {
+  color: #334155;
+}
+
+[data-theme="light"] .edu-num-list li {
+  color: #334155;
+}
+
+[data-theme="light"] .table-responsive {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+[data-theme="light"] .edu-table th {
+  background: #f8fafc;
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+[data-theme="light"] .edu-table td {
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+}
+
+[data-theme="light"] .edu-table tr:hover td {
+  background: #f8fafc;
+}
+
+[data-theme="light"] .callout-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+[data-theme="light"] .callout-box.concept {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+[data-theme="light"] .callout-header {
+  color: #059669;
+}
+
+[data-theme="light"] .callout-body {
+  color: #1f2937;
+}
+
+[data-theme="light"] details.edu-accordion.focus-accordion {
+  border-color: #fde68a;
+  background: #fffdf5;
+}
+
+[data-theme="light"] details.edu-accordion.focus-accordion[open] {
+  border-color: #f59e0b;
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.12);
+}
+
+[data-theme="light"] details.edu-sub-accordion {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+[data-theme="light"] details.edu-sub-accordion summary {
+  color: #0284c7;
+}
+
+[data-theme="light"] details.edu-sub-accordion .accordion-content {
+  border-top-color: #e2e8f0;
+  color: #334155;
+}
+

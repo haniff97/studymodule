@@ -1,0 +1,506 @@
+# scripts/gen_hmml5533.py
+# Generates notes, quizzes, flashcards, and mock exam questions for HMML5533
+import json
+
+notes = [
+    {
+        "title": "Inovasi dalam Pengajaran Bahasa",
+        "keywords": "Konsep inovasi, kreativiti, sejarah inovasi, ciri inovasi, kepentingan inovasi, bahan bantu mengajar bitara.",
+        "sections": [
+            {
+                "h": "1.1 Definisi dan Konsep Inovasi",
+                "text": "1.1 Definisi dan Konsep Inovasi\n\n⭐ Konsep Utama\nInovasi berasal daripada perkataan Latin 'innovare' yang bermaksud memperbaharui atau membuat perubahan ke arah kebaikan. Dalam pendidikan bahasa Melayu, inovasi merujuk kepada transformasi kaedah, teknik, strategi, atau bahan bantu mengajar (BBM) yang memperkenalkan pembaharuan positif bagi meningkatkan keberkesanan pengajaran dan pembelajaran (PdP).\n\nPerbezaan Kreativiti vs Inovasi:\n- Kreativiti: Kebolehan menjana idea-idea baharu yang asli, unik, dan bermakna.\n- Inovasi: Pelaksanaan dan penjelmaan idea kreatif tersebut ke dalam bentuk produk, proses, atau kaedah yang praktikal dan membawa nilai tambah."
+            },
+            {
+                "h": "1.2 Sejarah Perkembangan Inovasi dalam PdP Bahasa",
+                "text": "1.2 Sejarah Perkembangan Inovasi dalam PdP Bahasa\n\n📜 Transformasi Pedagogi Bahasa Melayu\n- Fasa Tradisional: Berpusatkan guru, kaedah hafalan, latih tubi mekanikal, papan hitam dan kapur.\n- Fasa Media Konvensional (1970-an–1980-an): Pengenalan OHP (overhead projector), kaset audio, carta dinding, dan radio pendidikan.\n- Fasa Teknologi Maklumat (1990-an–2000-an): Pengenalan Sekolah Bestari, Makmal Komputer, CD-ROM interaktif, dan internet.\n- Fasa Digital Kontemporari (Kini): Pembelajaran teradun (blended learning), gamifikasi, aplikasi mudah alih, kecerdasan buatan (AI), dan pembelajaran mikro."
+            },
+            {
+                "h": "1.3 Ciri dan Kepentingan Inovasi",
+                "text": "1.3 Ciri dan Kepentingan Inovasi\n\n🎯 Tiga Ciri Utama Inovasi Berjaya\n1. Kebaharuan (Novelty): Mempunyai elemen baharu berbanding amalan sedia ada.\n2. Kebolehgunaan (Usability & Practicality): Mudah dikendalikan oleh guru dan murid, kos berpatutan, dan sesuai dengan infrastruktur sekolah.\n3. Keberkesanan (Effectiveness): Terbukti meningkatkan minat, penglibatan aktif, dan penguasaan kemahiran berbahasa murid.\n\nKepentingan Inovasi:\n- Melahirkan guru dan murid yang berfikiran kreatif dan kritis.\n- Menyediakan Bahan Bantu Mengajar (BBM) yang bitara, interaktif, dan memikat perhatian generasi digital.\n- Meningkatkan motivasi intrinsik dan retensi ingatan murid dalam pembelajaran tatabahasa dan kesusasteraan."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: Definisi inovasi vs kreativiti, tiga ciri utama inovasi (kebaharuan, kebolehgunaan, keberkesanan), dan evolusi fasa inovasi pendidikan.",
+        "summary": "📋 Ringkasan Topik 1:\n- Inovasi ialah aplikasi idea kreatif ke arah penambahbaikan praktikal PdP.\n- Inovasi yang berkesan harus bersifat baharu, praktikal, dan meningkatkan prestasi murid.\n- Inovasi mengubah bilik darjah daripada pasif berpusatkan guru kepada aktif, kolaboratif, dan berpusatkan murid."
+    },
+    {
+        "title": "Perkaitan Inovasi dengan Teori, Strategi, Pendekatan, Kaedah dan Teknik",
+        "keywords": "Hierarki pedagogi, Konstruktivisme, Koperatif, Pendekatan berpusatkan murid, Kaedah inkuiri, Teknik didik hibur.",
+        "sections": [
+            {
+                "h": "2.1 Hierarki dan Konsep Pedagogi",
+                "text": "2.1 Hierarki dan Konsep Pedagogi\n\n📐 Hubungan Konseptual (Hierarki T-S-P-K-T)\n1. Teori: Asas falsafah dan psikologi tentang cara manusia belajar (cth: Konstruktivisme, Kognitivisme, Behaviourisme).\n2. Pendekatan: Hala tuju atau falsafah pengajaran secara menyeluruh (cth: Berpusatkan murid, berpusatkan bahan, bersepadu).\n3. Strategi: Rancangan atau kebijaksanaan memilih gabungan pendekatan, kaedah, dan bahan untuk mencapai objektif (cth: Pembelajaran koperatif, masteri).\n4. Kaedah: Siri tindakan guru yang sistematik berasaskan teori tertentu (cth: Kaedah inkuiri-penemuan, kaedah tatabahasa komunikatif).\n5. Teknik: Muslihat, taktik, atau kemahiran khusus yang digunakan dalam bilik darjah untuk menjayakan kaedah (cth: Main peranan, kerusi panas, bercerita)."
+            },
+            {
+                "h": "2.2 Inovasi Berasaskan Teori Pembelajaran",
+                "text": "2.2 Inovasi Berasaskan Teori Pembelajaran\n\n🧠 Teori Mendasari Inovasi\n- Konstruktivisme: Murid membina pengetahuan sendiri melalui penerokaan dan pengalaman autentik (cth: inovasi stesen pembelajaran).\n- Teori Kecerdasan Pelbagai (Howard Gardner): Mengakui kepelbagaian potensi murid (linguistik, logik-matematik, visual-ruang, kinestetik, muzik, interpersonal, intrapersonal, naturalis).\n- Pembelajaran Koperatif (Vygotsky & Slavin): Pembelajaran berpasukan saling bergantung secara positif (cth: Jigsaw, Think-Pair-Share)."
+            },
+            {
+                "h": "2.3 Inovasi Pengurusan Bilik Darjah",
+                "text": "2.3 Inovasi Pengurusan Bilik Darjah\n\n🏫 Persekitaran Pembelajaran Abad Ke-21 (PAK-21)\n- Susun atur meja fleksibel (Parking Lot, sudut bacaan santai).\n- Penggunaan ganjaran digital dan papan markah gamifikasi untuk memupuk disiplin positif."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: Membezakan hierarki Teori → Pendekatan → Strategi → Kaedah → Teknik, serta asas teori pembelajaran bagi sesuatu inovasi.",
+        "summary": "📋 Ringkasan Topik 2:\n- Inovasi pedagogi berlandaskan kesepaduan teori, pendekatan, strategi, kaedah, dan teknik.\n- Teori Konstruktivisme dan Kecerdasan Pelbagai merupakan landasan utama inovasi PAK-21.\n- Pengurusan bilik darjah inovatif menyediakan persekitaran yang kondusif untuk penerokaan bahasa."
+    },
+    {
+        "title": "Inovasi Teknik Pengajaran Bahasa",
+        "keywords": "Simulasi, drama, didik hibur, permainan bahasa, latih tubi inovatif, bercerita digital, teater pembaca.",
+        "sections": [
+            {
+                "h": "3.1 Teknik Simulasi dan Main Peranan",
+                "text": "3.1 Teknik Simulasi dan Main Peranan\n\n🎭 Pembelajaran Kontekstual Autentik\n- Simulasi: Mewujudkan situasi yang menyerupai keadaan sebenar untuk murid mempraktikkan penggunaan laras bahasa yang tepat (cth: simulasi sidang parlimen, wawancara televisyen, mahkamah keadilan).\n- Main Peranan (Role Play): Murid melakonkan watak tanpa skrip tegar, mengasah kemahiran bertutur secara spontan dan beretika."
+            },
+            {
+                "h": "3.2 Teknik Drama dan Teater Pembaca",
+                "text": "3.2 Teknik Drama dan Teater Pembaca\n\n🎬 Penghayatan Bahasa dan Sastera\n- Drama: Menggabungkan seni lakon, intonasi, penghayatan watak, dan nilai murni.\n- Teater Pembaca (Readers Theatre): Murid membaca skrip secara ekspresif dengan intonasi, nada, dan mimik muka tanpa memerlukan kostum atau set pentas rumit; amat berkesan untuk meningkatkan kelancaran membaca."
+            },
+            {
+                "h": "3.3 Inovasi Permainan Bahasa (Didik Hibur)",
+                "text": "3.3 Inovasi Permainan Bahasa (Didik Hibur)\n\n🎮 Gamifikasi Pembelajaran Bahasa\n- Menerapkan elemen permainan (mata, cabaran, lencana, persaingan sihat) dalam penguasaan kosa kata dan nahu.\n- Contoh: Sahiba (Scrabble Melayu), Roda Impian Tatabahasa, Teka Silang Kata Interaktif, Treasure Hunt Kosa Kata."
+            },
+            {
+                "h": "3.4 Teknik Bercerita Digital",
+                "text": "3.4 Teknik Bercerita Digital\n\n📖 Digital Storytelling\n- Menggabungkan kemahiran mengarang dan bercerita tradisional dengan elemen digital (suara latar, muzik latar, ilustrasi digital).\n- Murid bertindak sebagai pencipta kandungan yang menyuarakan idea secara kreatif."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: Ciri dan perbezaan antara teknik simulasi, teater pembaca, drama, permainan bahasa didik hibur, dan bercerita digital.",
+        "summary": "📋 Ringkasan Topik 3:\n- Teknik simulasi dan drama memperkaya kemahiran komunikasi lisan dalam situasi bermakna.\n- Teater pembaca meningkatkan kelancaran dan ekspresi pembacaan teks bahasa Melayu.\n- Didik hibur dan permainan bahasa mengurangkan kebimbangan (anxiety) dan menjadikan pembelajaran menyeronokkan."
+    },
+    {
+        "title": "Inovasi dan Kemahiran Bernilai Tambah",
+        "keywords": "KBAT, kemahiran belajar, i-THINK, kajian masa depan, kecerdasan pelbagai, kemahiran TMK.",
+        "sections": [
+            {
+                "h": "4.1 Kemahiran Berfikir Aras Tinggi (KBAT / HOTS)",
+                "text": "4.1 Kemahiran Berfikir Aras Tinggi (KBAT / HOTS)\n\n🧠 Mengupayakan Pemikiran Kritis & Kreatif\n- Merujuk kepada empat tahap tertinggi Taksonomi Bloom semakan Anderson & Krathwohl: Mengaplikasi, Menganalisis, Menilai, dan Mencipta.\n- Menggunakan Peta Pemikiran i-THINK (Peta Bulatan, Peta Buih, Peta Buih Berganda, Peta Pokok, Peta Dakap, Peta Alir, Peta Pelbagai Alir, Peta Titi) untuk memvisualisasikan pemikiran dalam penulisan karangan dan analisis tatabahasa."
+            },
+            {
+                "h": "4.2 Kemahiran Belajar Cara Belajar",
+                "text": "4.2 Kemahiran Belajar Cara Belajar\n\n📚 Penguasaan Strategi Pembelajaran\n- Kemahiran membaca pantas: Skimming (membaca sepintas lalu untuk dapatkan gambaran umum) dan Scanning (mengimbas untuk mencari maklumat khusus).\n- Teknik membuat nota: Peta minda Buzan, Cornell Note-taking system, rangka intipati."
+            },
+            {
+                "h": "4.3 Kajian Masa Depan & Kecerdasan Pelbagai",
+                "text": "4.3 Kajian Masa Depan & Kecerdasan Pelbagai\n\n🔮 Antisipasi dan Diversiti Bakat\n- Kajian Masa Depan: Mendidik murid membuat ramalan, ramalan trend, dan penyelesaian masalah masa hadapan (cth: menulis karangan 'Sekolah pada Tahun 2050').\n- Kecerdasan Pelbagai (Gardner): Menyediakan kepelbagaian aktiviti bahasa yang menyantuni murid visual, auditori, kinestetik, dan muzikal."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: 8 peta pemikiran i-THINK, perbezaan skimming vs scanning, dan penerapan KBAT dalam item soalan bahasa Melayu.",
+        "summary": "📋 Ringkasan Topik 4:\n- Kemahiran bernilai tambah melengkapkan murid dengan kemahiran hidup abad ke-21.\n- Peta pemikiran i-THINK menstruktur idea murid dalam mengarang dan menganalisis teks.\n- Skimming dan scanning membolehkan pemprosesan maklumat yang pantas dan efisien."
+    },
+    {
+        "title": "Inovasi Penggunaan Bahan Konvensional",
+        "keywords": "Buku teks digital, Akhbar Dalam Darjah (ADD), majalah, radio pendidikan, televisyen, bahan bercetak kreatif.",
+        "sections": [
+            {
+                "h": "5.1 Inovasi Pemanfaatan Buku Teks",
+                "text": "5.1 Inovasi Pemanfaatan Buku Teks\n\n📖 Dari Statik ke Dinamik\n- Buku teks bukan lagi satu-satunya sumber pengajaran, tetapi menjadi titik tolak penerokaan ilmu.\n- Inovasi: Pautan kod QR dalam buku teks digital yang membawa kepada audio lagu rakyat, video animasi peribahasa, dan kuiz interaktif."
+            },
+            {
+                "h": "5.2 Akhbar Dalam Darjah (ADD)",
+                "text": "5.2 Akhbar Dalam Darjah (ADD)\n\n📰 Sumber Teks Autentik Kontemporari\n- Memanfaatkan akhbar harian (Berita Harian, Utusan Malaysia) sebagai bahan bacaan luas dan kajian isu semasa.\n- Aktiviti inovatif: Memburu kata sendi nama dalam berita sukan, menulis ulasan rencana pengarang, menganalisis laras bahasa iklan."
+            },
+            {
+                "h": "5.3 Pemanfaatan Majalah, Radio dan Televisyen",
+                "text": "5.3 Pemanfaatan Majalah, Radio dan Televisyen\n\n📻 Media Konvensional Berwajah Baharu\n- Majalah bahasa dan sastera (Dewan Siswa, Dewan Masyarakat) untuk memperkaya wacana intelek.\n- Radio & podcast: Melatih kemahiran mendengar sebutan baku dan intonasi siaran berita.\n- Klip dokumentari televisyen sebagai rangsangan penulisan karangan berformat ulasan atau rencana."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: Kaedah inovatif mengintegrasikan Akhbar Dalam Darjah (ADD) dan pemanfaatan buku teks secara interaktif dalam bilik darjah.",
+        "summary": "📋 Ringkasan Topik 5:\n- Bahan konvensional tetap relevan apabila dipadukan dengan pendekatan pedagogi kreatif.\n- Akhbar dalam darjah menyediakan bahan bahasa autentik dan memperluas pengetahuan isu semasa.\n- Media massa membekalkan input laras bahasa yang pelbagai (berita, iklan, wawancara, sastera)."
+    },
+    {
+        "title": "Komputer dalam Pengajaran Bahasa",
+        "keywords": "PBK / CALL, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, pemprosesan perkataan, papan putih interaktif.",
+        "sections": [
+            {
+                "h": "6.1 Konsep Pembelajaran Berbantukan Komputer (PBK)",
+                "text": "6.1 Konsep Pembelajaran Berbantukan Komputer (PBK)\n\n💻 Computer Assisted Language Learning (CALL)\n- PBK merujuk kepada penggunaan perkakasan dan perisian komputer dalam proses pengajaran dan pembelajaran bahasa.\n- Mod PBK: Mod Tutorial (penyampaian isi pelajaran), Mod Latih Tubi (pengukuhan kemahiran), Mod Simulasi (penerokaan situasi), dan Mod Permainan Instruksional."
+            },
+            {
+                "h": "6.2 Inovasi Pemprosesan Perkataan (Word)",
+                "text": "6.2 Inovasi Pemprosesan Perkataan (Word)\n\n📝 Penulisan Proses Digital\n- Menggunakan perisian pemproses perkataan (Microsoft Word / Google Docs) untuk melatih penulisan karangan berperingkat: draf awal → penyuntingan rakan sebaya (peer editing) → pembetulan ejaan/tatabahasa → draf akhir.\n- Pemanfaatan fungsi 'Track Changes' dan komen guru untuk maklum balas formatif yang pantas."
+            },
+            {
+                "h": "6.3 Microsoft Excel dan PowerPoint dalam PdP BM",
+                "text": "6.3 Microsoft Excel dan PowerPoint dalam PdP BM\n\n📊 Visualisasi Data dan Pembentangan Interaktif\n- Excel: Membina pangkalan data kosa kata murid, glosari sinonim-antonim, dan carta kekerapan membaca.\n- PowerPoint: Membina persembahan slaid interaktif dengan hiperteks, navigasi butang, dan kuiz interaktif beranimasi."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: Mod-mod utama PBK (tutorial, latih tubi, simulasi, permainan) dan aplikasi MS Word/Docs dalam pendekatan penulisan proses.",
+        "summary": "📋 Ringkasan Topik 6:\n- PBK mempercepatkan penguasaan kemahiran berbahasa melalui interaktiviti dan maklum balas segera.\n- Pemprosesan perkataan memupuk budaya menyunting dan memurnikan karangan secara kolaboratif.\n- Perisian produktiviti pejabat boleh diadaptasi secara kreatif untuk pelbagai aktiviti bahasa."
+    },
+    {
+        "title": "Inovasi Bahan Multimedia",
+        "keywords": "Multimedia interaktif, Prinsip Mayer, hipermedia, grafik, animasi, audio digital, video.",
+        "sections": [
+            {
+                "h": "7.1 Konsep dan Elemen Multimedia",
+                "text": "7.1 Konsep dan Elemen Multimedia\n\n🎨 Lima Elemen Teras Multimedia\n1. Teks: Elemen asas penyampaian maklumat bertulis yang tepat.\n2. Grafik: Gambar, ilustrasi, carta yang memudahkan pemahaman konsep abstrak.\n3. Audio: Suara latar, muzik, dan kesan bunyi yang merangsang pendengaran.\n4. Video: Rakaman visual bergerak yang memberikan gambaran situasi sebenar.\n5. Animasi: Imej bergerak yang menghidupkan penerangan proses tatabahasa atau jalan cerita sastera."
+            },
+            {
+                "h": "7.2 Teori Kognitif Pembelajaran Multimedia (Richard Mayer)",
+                "text": "7.2 Teori Kognitif Pembelajaran Multimedia (Richard Mayer)\n\n🧠 Memaksimumkan Saluran Kognitif\n- Saluran Dual (Dual-channel assumption): Manusia memproses maklumat visual dan verbal melalui saluran berasingan.\n- Kapasiti Terhad (Limited capacity assumption): Setiap saluran hanya boleh memproses sejumlah maklumat terhad pada satu masa.\n- Prinsip Utama Mayer:\n  * Prinsip Multimedia: Murid belajar lebih baik daripada kata-kata dan gambar berbanding kata-kata sahaja.\n  * Prinsip Modaliti: Murid belajar lebih baik daripada animasi + narasi audio berbanding animasi + teks pada skrin.\n  * Prinsip Kejelekitan (Coherence): Menyingkirkan perkataan, bunyi, dan gambar yang tidak berkaitan untuk mengelakkan beban kognitif."
+            },
+            {
+                "h": "7.3 Hipermedia dan Pembangunan Modul Interaktif",
+                "text": "7.3 Hipermedia dan Pembangunan Modul Interaktif\n\n🌐 Navigasi Bukan Linear\n- Hipermedia membolehkan murid meneroka nota mengikut laluan pilihan sendiri (bukan linear) melalui pautan hiperteks.\n- Menggalakkan pembelajaran kendiri mengikut kadar kemampuan murid (self-paced learning)."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: 5 elemen multimedia, Prinsip Pembelajaran Multimedia Mayer (prinsip multimedia, modaliti, dan kejelekitan), serta kelebihan hipermedia.",
+        "summary": "📋 Ringkasan Topik 7:\n- Gabungan elemen multimedia merangsang pelbagai deria dan meningkatkan kefahaman murid.\n- Reka bentuk multimedia mesti mematuhi prinsip kognitif Mayer agar tidak membebankan memori kerja murid.\n- Hipermedia menyokong pembelajaran secara fleksibel dan berpusatkan murid."
+    },
+    {
+        "title": "Inovasi Sumber Internet",
+        "keywords": "World Wide Web, enjin carian, pengindeksan, portal pembelajaran, e-akhbar, keselamatan siber.",
+        "sections": [
+            {
+                "h": "8.1 Pemanfaatan Internet dalam PdP Bahasa Melayu",
+                "text": "8.1 Pemanfaatan Internet dalam PdP Bahasa Melayu\n\n🌐 Gedung Ilmu Tanpa Batas\n- Internet menyediakan sumber maklumat autentik dan terkini bagi menyokong pembelajaran kosa kata, laras bahasa, dan isu semasa.\n- Membolehkan komunikasi rentas sempadan antara sekolah melalui e-mel, forum perbincangan, dan bilik sembang pendidikan."
+            },
+            {
+                "h": "8.2 Enjin Carian dan Kemahiran Pengindeksan",
+                "text": "8.2 Enjin Carian dan Kemahiran Pengindeksan\n\n🔍 Teknik Carian Pintar (Boolean Operators)\n- Mengajar murid mencari sumber rujukan bahasa Melayu dengan berkesan menggunakan kata kunci tepat dan pengendali Boolean (AND, OR, NOT, tanda petikan \"\").\n- Menilai kredibiliti sumber web: Mengesahkan nama penulis, domain (.edu, .gov), tarikh penerbitan, dan kesahihan fakta sebelum dijadikan rujukan."
+            },
+            {
+                "h": "8.3 Akhbar Digital dan Portal Pembelajaran",
+                "text": "8.3 Akhbar Digital dan Portal Pembelajaran\n\n📰 Akses Pantas dan Interaktif\n- Pemanfaatan e-akhbar dan portal rasmi DBP (Pusat Rujukan Persuratan Melayu - PRPM).\n- Portal Delima KPM: Akses kepada e-buku teks, modul digital, dan aplikasi pembelajaran kolaboratif Google Classroom."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: Strategi carian pintar di internet (Boolean), penilaian kesahihan sumber web, dan pemanfaatan portal PRPM DBP dalam PdP bahasa.",
+        "summary": "📋 Ringkasan Topik 8:\n- Internet membuka peluang pembelajaran penerokaan yang luas dan melangkaui sempadan bilik darjah fizikal.\n- Kemahiran literasi maklumat penting untuk membezakan maklumat sahih dan berita palsu.\n- Portal rasmi seperti PRPM DBP memudahkan rujukan istilah, ejaan, dan tatabahasa baku."
+    },
+    {
+        "title": "Pangkalan Data",
+        "keywords": "Pangkalan data korpus, DBP, Projek Konkordans Melayu (PKsM), konkordans, kolokasi, kekerapan perkataan.",
+        "sections": [
+            {
+                "h": "9.1 Konsep Pangkalan Data Korpus Linguistik",
+                "text": "9.1 Konsep Pangkalan Data Korpus Linguistik\n\n🗄️ Bukti Penggunaan Bahasa Sebenar\n- Korpus linguistik ialah himpunan teks bertulis atau rakaman lisan yang besar, autentik, dan disimpan secara elektronik untuk tujuan analisis linguistik.\n- Pangkalan data korpus Dewan Bahasa dan Pustaka (DBP) merangkumi jutaan leksikon daripada novel, akhbar, buku teks, dan wacana rasmi."
+            },
+            {
+                "h": "9.2 Projek Konkordans Melayu (PKsM)",
+                "text": "9.2 Projek Konkordans Melayu (PKsM)\n\n📜 Pelopor Korpus Teks Klasik dan Moden\n- PKsM diasaskan oleh Ian Proudfoot di Australian National University (ANU) mengumpulkan teks-teks sastera Melayu tradisional.\n- Membolehkan penyelidik dan guru mencari konteks kemunculan sesuatu perkataan dalam naskhah Melayu lama (cth: Sejarah Melayu, Hikayat Hang Tuah)."
+            },
+            {
+                "h": "9.3 Analisis Konkordans dan Kolokasi dalam PdP",
+                "text": "9.3 Analisis Konkordans dan Kolokasi dalam PdP\n\n🔬 Aplikasi Pedagogi Data-Driven Learning (DDL)\n- Konkordans (Keyword in Context - KWIC): Memaparkan perkataan sasaran di tengah skrin bersama kata-kata yang mendahului dan mengikutinya.\n- Kolokasi: Meneliti kecenderungan kata-kata tertentu untuk muncul bersama (cth: 'memberikan kerjasama', bukan 'memberikan tolongan').\n- Murid dapat membuat generalisasi hukum nahu dan kelaziman frasa berdasarkan bukti korpus sebenar."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: Konsep korpus linguistik, fungsi konkordans (KWIC), konsep kolokasi, dan sumbangan pangkalan data DBP serta PKsM.",
+        "summary": "📋 Ringkasan Topik 9:\n- Korpus linguistik membekalkan data autentik tentang penggunaan sebenar bahasa Melayu.\n- Analisis konkordans mendedahkan corak penggunaan kata dalam konteks ayat yang pelbagai.\n- Pendekatan pembelajaran berasaskan data (DDL) melatih murid menjadi penyelidik bahasa muda."
+    },
+    {
+        "title": "Inovasi dan Sumber Manusia",
+        "keywords": "Guru inovator, Kajian Tindakan, PLC, etika digital, hak cipta, rintangan inovasi.",
+        "sections": [
+            {
+                "h": "10.1 Guru Sebagai Inovator dan Penyelidik",
+                "text": "10.1 Guru Sebagai Inovator dan Penyelidik\n\n👨‍🏫 Peranan Guru Masa Hadapan\n- Guru bukan sekadar pelaksana kurikulum, tetapi agen perubahan dan pereka bentuk pembelajaran (learning designer).\n- Mengamalkan refleksi kendiri berterusan untuk mengenal pasti masalah pembelajaran murid di bilik darjah dan mereka cipta intervensi yang berkesan."
+            },
+            {
+                "h": "10.2 Kajian Tindakan dan Komuniti Pembelajaran Profesional (PLC)",
+                "text": "10.2 Kajian Tindakan dan Komuniti Pembelajaran Profesional (PLC)\n\n🔄 Model Kitaran Kempe & McTaggart\n- Kitaran Kajian Tindakan: Merancang (Plan) → Bertindak (Act) → Memerhati (Observe) → Merefleksi (Reflect).\n- Professional Learning Community (PLC): Guru berkongsi amalan terbaik, membuat kajian pengajaran bersama (Lesson Study), dan memberi bimbingan rakan sekerja (Peer Coaching) untuk memurnikan inovasi."
+            },
+            {
+                "h": "10.3 Isu, Cabaran dan Etika Inovasi",
+                "text": "10.3 Isu, Cabaran dan Etika Inovasi\n\n⚖️ Integriti Profesionalisme\n- Cabaran Inovasi: Rintangan terhadap perubahan (resistance to change), kekangan masa, kos pembiayaan, dan jurang prasarana digital antara bandar dan luar bandar.\n- Isu Etika & Hak Cipta: Menghormati hak cipta intelek bahan digital, mengelakkan plagiarisme inovasi, dan memastikan keselamatan data peribadi murid di alam siber."
+            }
+        ],
+        "fokus": "Fokus Peperiksaan: Kitaran Kajian Tindakan (Plan-Act-Observe-Reflect), amalan PLC (Lesson Study, Peer Coaching), dan isu etika hak cipta dalam penciptaan inovasi.",
+        "summary": "📋 Ringkasan Topik 10:\n- Guru sebagai inovator menghasilkan penyelesaian praktikal berasaskan Kajian Tindakan.\n- Budaya PLC memupuk kolaborasi profesional dan kemampanan sesuatu inovasi pendidikan.\n- Pelaksanaan inovasi mesti mengutamakan etika, integriti hak cipta, dan kebolehcapaian inklusif."
+    }
+]
+
+# Quizzes: 5 per topic (50 questions)
+quizzes = {
+    "t1": [
+        {"q": "Apakah perbezaan asas antara kreativiti dan inovasi?", "opts": ["Kreativiti ialah penjanaan idea baharu yang asli, manakala inovasi ialah pelaksanaan idea tersebut ke dalam bentuk praktikal yang membawa nilai tambah", "Kreativiti untuk seni manakala inovasi untuk sains semata-mata", "Kreativiti memerlukan kos tinggi manakala inovasi percuma", "Tiada sebarang perbezaan antara keduanya"], "a": 0, "fb": "Kreativiti ialah kebolehan menjana idea asli; inovasi ialah pelaksanaan idea itu secara praktikal dan memberi impak."},
+        {"q": "Tiga ciri utama yang perlu ada pada sesuatu inovasi pengajaran yang berjaya ialah:", "opts": ["Mahal, canggih, dan sukar digunakan", "Kebaharuan, kebolehgunaan, dan keberkesanan", "Tradisional, berbentuk buku, dan tegar", "Hanya boleh digunakan di bilik makmal"], "a": 1, "fb": "Tiga ciri inovasi berjaya ialah kebaharuan (novelty), kebolehgunaan (usability), dan keberkesanan (effectiveness)."},
+        {"q": "Dalam sejarah inovasi pengajaran bahasa di Malaysia, era 1970-an dan 1980-an didominasi oleh media:", "opts": ["Kecerdasan buatan dan realiti maya (VR)", "Overhead Projector (OHP), pita kaset audio, dan radio pendidikan", "Telefon pintar dan aplikasi Telegram", "Papan hitam dan batu tulis sahaja"], "a": 1, "fb": "Era 70-an–80-an menyaksikan pengenalan OHP, kaset audio, carta dinding, dan radio sekolah."},
+        {"q": "Mengapakah inovasi Bahan Bantu Mengajar (BBM) penting dalam bilik darjah bahasa Melayu?", "opts": ["Untuk menghabiskan peruntukan kewangan panitia", "Untuk menarik minat, meningkatkan kefahaman konsep sukar, dan merangsang penglibatan aktif murid", "Supaya guru tidak perlu lagi hadir mengajar", "Untuk menggantikan peranan buku teks sepenuhnya"], "a": 1, "fb": "Inovasi BBM membantu memvisualisasikan konsep abstrak, meningkatkan motivasi dan daya ingatan murid."},
+        {"q": "Perkataan 'inovasi' berasal daripada bahasa Latin 'innovare' yang bermaksud:", "opts": ["Meniru apa yang ada", "Memperbaharui atau membuat perubahan", "Menghafal perkataan sukar", "Menulis karangan panjang"], "a": 1, "fb": "Innovare bermaksud memperbaharui atau menghasilkan pembaharuan ke arah penambahbaikan."}
+    ],
+    "t2": [
+        {"q": "Susunan hierarki konsep pedagogi daripada tahap paling asas/falsafah kepada tahap tindakan khusus ialah:", "opts": ["Teknik → Kaedah → Strategi → Pendekatan → Teori", "Teori → Pendekatan → Strategi → Kaedah → Teknik", "Kaedah → Teknik → Teori → Pendekatan → Strategi", "Strategi → Teori → Kaedah → Pendekatan → Teknik"], "a": 1, "fb": "Hierarki pedagogi yang betul: Teori (asas ilmu) → Pendekatan → Strategi → Kaedah → Teknik (muslihat khusus)."},
+        {"q": "Teori pembelajaran manakah yang menegaskan bahawa murid membina pengetahuan secara aktif melalui pengalaman dan interaksi sosial?", "opts": ["Behaviourisme", "Konstruktivisme", "Strukturalisme", "Nahu Preskriptif"], "a": 1, "fb": "Konstruktivisme menekankan pembinaan aktif pengetahuan murid melalui penerokaan dan interaksi sosial."},
+        {"q": "Seorang guru merancang aktiviti 'Think-Pair-Share' untuk murid membincangkan peribahasa. Guru tersebut menerapkan strategi:", "opts": ["Pembelajaran Koperatif", "Kaedah Tatabahasa Terjemahan", "Latih tubi individu semata-mata", "Hafalan mekanikal"], "a": 0, "fb": "Think-Pair-Share ialah struktur pembelajaran koperatif yang menggalakkan perbincangan berpasangan."},
+        {"q": "Teori Kecerdasan Pelbagai yang diasaskan oleh Howard Gardner mengiktiraf bahawa:", "opts": ["Kecerdasan manusia hanya boleh diukur melalui ujian IQ bertulis", "Setiap murid memiliki kombinasi pelbagai potensi kecerdasan unik yang wajar disantuni dalam PdP", "Semua murid belajar dengan cara yang sama", "Hanya kecerdasan linguistik yang penting di sekolah"], "a": 1, "fb": "Teori Gardner mengiktiraf 8 (atau 9) kecerdasan pelbagai yang memerlukan pendekatan pengajaran bervariasi."},
+        {"q": "Apakah yang dimaksudkan dengan 'Teknik' dalam konteks pengajaran bahasa?", "opts": ["Falsafah umum tentang fitrah bahasa", "Muslihat, taktik, atau langkah khusus guru untuk menjayakan sesuatu kaedah pengajaran dalam bilik darjah", "Buku sukatan kurikulum kebangsaan", "Peperiksaan penilaian akhir tahun"], "a": 1, "fb": "Teknik ialah muslihat atau kemahiran praktikal khusus yang digunakan guru semasa penyampaian PdP."}
+    ],
+    "t3": [
+        {"q": "Aktiviti di mana murid membaca skrip dialog secara ekspresif dengan intonasi dan mimik muka tanpa memerlukan pentas atau kostum rumit dikenali sebagai:", "opts": ["Teater Pembaca (Readers Theatre)", "Simulasi parlimen", "Latih tubi pola", "Dikte ejaan"], "a": 0, "fb": "Teater Pembaca mengutamakan kelancaran, intonasi, dan penghayatan teks bacaan secara berkumpulan."},
+        {"q": "Apakah perbezaan utama antara teknik main peranan (role play) dan simulasi?", "opts": ["Main peranan membawakan watak spontan mengikut situasi, manakala simulasi mereka bentuk situasi realiti sebenar yang lebih kompleks dan berstruktur", "Main peranan menggunakan komputer manakala simulasi tidak", "Main peranan hanya untuk guru manakala simulasi untuk murid", "Kedua-duanya tiada perbezaan langsung"], "a": 0, "fb": "Simulasi mencipta semula sistem situasi sebenar (cth: mahkamah, pasaran), manakala main peranan lebih berfokus kepada penghayatan watak."},
+        {"q": "Konsep 'Didik Hibur' (edutainment) dalam kurikulum Bahasa Melayu bertujuan untuk:", "opts": ["Memastikan murid hanya berseronok tanpa menguasai objektif pembelajaran", "Mewujudkan suasana PdP yang santai, seronok, dan bebas daripada tekanan melalui nyanyian, permainan, dan lakonan", "Menggantikan sepenuhnya peperiksaan awam", "Mengurangkan masa belajar murid di sekolah"], "a": 1, "fb": "Didik hibur bertujuan menjadikan PdP bahasa seronok dan bermakna tanpa menghilangkan fokus pembelajaran."},
+        {"q": "Aktiviti 'Kerusi Panas' (Hot Seating) dalam teknik drama bahasa Melayu melibatkan:", "opts": ["Seorang murid duduk di kerusi menjawab soalan rakan-rakan sebagai watak dalam cerita atau tokoh sastera", "Murid berebut kerusi semasa muzik dimainkan", "Murid menghafal senarai peribahasa sambil berdiri", "Guru menyoal murid yang melakukan kesalahan disiplin"], "a": 0, "fb": "Hot Seating ialah teknik drama di mana seorang murid memegang watak tertentu dan menjawab soalan kelas."},
+        {"q": "Penerapan elemen permainan (mata, tahap, cabaran, ganjaran) dalam proses pembelajaran dikenali sebagai istilah:", "opts": ["Gamifikasi (Gamification)", "Teknifikasi", "Digitalisasi", "Klasifikasi"], "a": 0, "fb": "Gamifikasi ialah pengaplikasian mekanik permainan dalam konteks bukan permainan untuk memotivasikan murid."}
+    ],
+    "t4": [
+        {"q": "Manakah antara berikut BUKAN salah satu daripada 8 Peta Pemikiran i-THINK?", "opts": ["Peta Bulatan", "Peta Buih Berganda", "Peta Pelbagai Alir", "Peta Dunia Merentas Sempadan"], "a": 3, "fb": "Peta Dunia bukan peta pemikiran i-THINK. 8 Peta i-THINK ialah: Bulatan, Buih, Buih Berganda, Pokok, Dakap, Alir, Pelbagai Alir, dan Titi."},
+        {"q": "Peta pemikiran i-THINK yang paling sesuai digunakan untuk membandingkan perbezaan dan persamaan antara dua konsep ialah:", "opts": ["Peta Buih Berganda (Double Bubble Map)", "Peta Bulatan", "Peta Alir", "Peta Dakap"], "a": 0, "fb": "Peta Buih Berganda digunakan khusus untuk membanding dan membezakan dua konsep."},
+        {"q": "Kemahiran membaca sepintas lalu bagi mendapatkan gambaran keseluruhan isi teks dikenali sebagai:", "opts": ["Scanning", "Skimming", "SQ3R", "Analisis fonemik"], "a": 1, "fb": "Skimming ialah membaca sepintas lalu untuk mendapatkan tema/gambaran am, manakala scanning untuk mencari data spesifik."},
+        {"q": "Tahap tertinggi dalam Taksonomi Bloom Semakan Anderson & Krathwohl yang mencerminkan inovasi murid ialah:", "opts": ["Mengingat (Remembering)", "Memahami (Understanding)", "Mencipta (Creating)", "Mengaplikasi (Applying)"], "a": 2, "fb": "Tahap 'Mencipta' (Creating) ialah kemuncak aras kognitif di mana murid menghasilkan idea, produk atau pandangan baharu."},
+        {"q": "Apakah tujuan aktiviti 'Kajian Masa Depan' dalam pembelajaran bahasa Melayu?", "opts": ["Membimbing murid membuat ramalan, meneroka alternatif masa depan, dan mencadangkan penyelesaian masalah jangka panjang", "Mengkaji sejarah zaman Kesultanan Melayu Melaka", "Mencatat perbelanjaan harian keluarga", "Menghafal tarikh cuti umum persekolahan"], "a": 0, "fb": "Kajian Masa Depan melatih pemikiran antisipatif murid terhadap cabaran hari esok melalui penulisan dan wacana."}
+    ],
+    "t5": [
+        {"q": "Apakah inovasi moden yang diterapkan dalam buku teks digital bahasa Melayu KPM masa kini?", "opts": ["Pautan kod QR dan realiti terimbuh (AR) yang menghubungkan teks dengan audio, video, dan latihan interaktif", "Teks yang dicetak di atas kertas kalis air sahaja", "Penghapusan gambar berwarna sepenuhnya", "Penjualan buku secara lelongan dalam talian"], "a": 0, "fb": "Buku teks digital kini disepadukan dengan kod QR, audio bacaan, dan modul interaktif."},
+        {"q": "Program 'Akhbar Dalam Darjah' (ADD) menggunakan surat khabar harian dalam PdP untuk tujuan:", "opts": ["Membekalkan teks autentik, meluaskan kosa kata semasa, dan menganalisis pelbagai laras bahasa", "Mengajar murid cara menjual surat khabar lama", "Menggantikan buku latihan sepenuhnya tanpa bimbingan guru", "Membaca ruangan iklan jawatan kosong semata-mata"], "a": 0, "fb": "ADD menyediakan bahan teks autentik kehidupan sebenar untuk pengayaan kosa kata dan pemikiran kritis."},
+        {"q": "Contoh aktiviti bahasa yang boleh dijalankan menggunakan keratan akhbar ialah:", "opts": ["Mencari dan membetulkan kesalahan tatabahasa, menulis rumusan berita, dan membina ulasan rencana", "Mengoyakkan akhbar untuk dijadikan hiasan kelas", "Menyalin nombor telefon wartawan", "Menghafal tarikh terbitan akhbar"], "a": 0, "fb": "Keratan akhbar amat berkesan untuk aktiviti membetulkan kesalahan tatabahasa, rumusan, dan pemahaman isu."},
+        {"q": "Bagaimanakah siaran audio atau radio pendidikan boleh dimanfaatkan dalam PdP bahasa Melayu?", "opts": ["Meningkatkan kemahiran mendengar sebutan baku, intonasi pengacaraan, dan kefahaman lisan", "Mengisi masa lapang semasa guru bermesyuarat", "Menghiburkan murid supaya tertidur di kelas", "Mempelajari bahasa asing tanpa terjemahan"], "a": 0, "fb": "Audio dan podcast melatih kemahiran mendengar (listening skills), apresiasi sebutan baku, dan intonasi bahasa."},
+        {"q": "Majalah keluaran DBP seperti 'Dewan Siswa' dan 'Dewan Bahasa' sesuai digunakan sebagai bahan pengajaran kerana:", "opts": ["Mengandungi wacana ilmiah berkualiti, rencana bahasa baku, cerpen, dan puisi bermutu tinggi", "Percuma di semua kedai buku", "Hanya mempunyai gambar tanpa teks panjang", "Ditulis khas untuk orang asing yang melancong"], "a": 0, "fb": "Majalah DBP memaparkan wacana sastera dan bahasa yang bermutu tinggi untuk rujukan murid dan guru."}
+    ],
+    "t6": [
+        {"q": "Empat mod utama dalam Pembelajaran Berbantukan Komputer (PBK / CALL) ialah:", "opts": ["Tutorial, Latih Tubi, Simulasi, dan Permainan Instruksional", "Membaca, Menulis, Mengira, dan Melukis", "E-mel, Forum, Sembang, dan Blog", "Perkakasan, Perisian, Pengguna, dan Internet"], "a": 0, "fb": "Empat mod PBK tradisional ialah mod Tutorial, Latih Tubi (Drill & Practice), Simulasi, dan Permainan."},
+        {"q": "Bagaimanakah perisian pemproses perkataan (Microsoft Word / Google Docs) menyokong pendekatan penulisan proses?", "opts": ["Memudahkan draf ditulis, disunting secara kolaboratif menggunakan Track Changes, dan dimurnikan tanpa perlu menyalin semula seluruh teks", "Menghapuskan keperluan murid untuk berfikir", "Menulis karangan secara automatik tanpa input manusia", "Menghasilkan cetakan kertas bersaiz poster sahaja"], "a": 0, "fb": "Pemproses perkataan menyokong kitaran penulisan proses: mendraf, menyunting rakan sebaya, dan memurnikan karangan."},
+        {"q": "Apakah kegunaan kreatif perisian hamparan elektronik (Microsoft Excel) dalam pengajaran bahasa Melayu?", "opts": ["Membina pangkalan data kosa kata, jadual padanan sinonim-antonim, dan merekod kemajuan bacaan murid", "Mencipta rakaman suara audio murid", "Mengedit fail video persembahan drama", "Menggantikan papan putih di bilik darjah"], "a": 0, "fb": "Excel sangat berguna untuk mengurus bank kosa kata, padanan istilah, dan menjejak kemajuan leksikal."},
+        {"q": "Penggunaan slaid interaktif (PowerPoint / Canva) dalam pembentangan kumpulan membantu murid:", "opts": ["Menyusun idea secara visual dan melatih kemahiran komunikasi lisan di hadapan rakan-rakan", "Membaca teks panjang tanpa perlu memandang hadirin", "Mengelak daripada menjawab soalan guru", "Menyembunyikan kelemahan tatabahasa"], "a": 0, "fb": "Slaid interaktif memupuk kemahiran visualisasi idea dan keyakinan berucap di khalayak."},
+        {"q": "Kelebihan utama mod Latih Tubi dalam perisian komputer bahasa ialah:", "opts": ["Memberikan maklum balas pembetulan secara serta-merta kepada murid", "Menyediakan markah yang boleh ditukar kepada wang tunai", "Murid boleh bermain permainan video tanpa kawalan", "Guru tidak perlu menyemak sukatan pelajaran"], "a": 0, "fb": "Maklum balas serta-merta (immediate feedback) membantu murid membetulkan kesilapan konsep secara langsung."}
+    ],
+    "t7": [
+        {"q": "Lima elemen teras dalam bahan multimedia ialah:", "opts": ["Teks, Grafik, Audio, Video, dan Animasi", "Kertas, Pen, Pembaris, Pemadam, dan Papan Hitam", "Subjek, Predikat, Objek, Pelengkap, dan Keterangan", "Fonem, Morfem, Kata, Frasa, dan Ayat"], "a": 0, "fb": "Lima elemen multimedia interaktif ialah teks, grafik, audio, video, dan animasi."},
+        {"q": "Menurut Teori Kognitif Pembelajaran Multimedia Richard Mayer, 'Prinsip Modaliti' menyatakan bahawa:", "opts": ["Murid belajar lebih berkesan daripada animasi dengan narasi audio berbanding animasi dengan teks bertulis pada skrin", "Murid mesti menggunakan semua deria serentak tanpa henti", "Semua teks mesti berwarna-warni", "Video mesti dimainkan dengan kelajuan maksimum"], "a": 0, "fb": "Prinsip modaliti menegaskan narasi audio lebih berkesan bersama grafik bergerak kerana tidak membebankan saluran visual."},
+        {"q": "Apakah maksud 'Prinsip Kejelekitan' (Coherence Principle) dalam reka bentuk multimedia Mayer?", "opts": ["Menyingkirkan kata-kata, gambar, bunyi, atau muzik latar yang tidak berkaitan dengan objektif pembelajaran", "Memasukkan seberapa banyak lagu pop dalam slaid", "Mengulang video yang sama sebanyak sepuluh kali", "Menampal gambar hiasan di setiap sudut skrin"], "a": 0, "fb": "Prinsip kejelekitan menggesa penyingkiran sebarang elemen hiasan yang mengganggu tumpuan kognitif murid."},
+        {"q": "Apakah perbezaan antara teks linear dan hiperteks dalam media pembelajaran?", "opts": ["Teks linear dibaca secara berturutan dari awal ke akhir, manakala hiperteks membolehkan navigasi bukan linear melalui pautan pautan aktif (hyperlink)", "Teks linear untuk komputer, hiperteks untuk buku cetak", "Teks linear tiada gambar, hiperteks hanya ada bunyi", "Tiada perbezaan langsung"], "a": 0, "fb": "Hiperteks membolehkan laluan pembacaan bukan linear mengikut minat dan keperluan kendiri murid."},
+        {"q": "Penggunaan animasi dalam menerangkan konsep tatabahasa (seperti imbuhan bergabung dengan kata dasar) berkesan kerana:", "opts": ["Menunjukkan proses perubahan bentuk kata secara visual dan dinamik", "Animasi sentiasa berbunyi bising", "Dapat memendekkan waktu kelas secara drastik", "Menghapuskan sebarang latihan bertulis"], "a": 0, "fb": "Animasi memvisualisasikan proses morfologi yang dinamik (cth: proses asimilasi bunyi nahu) dengan jelas."}
+    ],
+    "t8": [
+        {"q": "Pengendali Boolean (Boolean Operators) yang digunakan untuk menggabungkan dua kata kunci carian bagi memastikan kedua-duanya hadir dalam keputusan carian ialah:", "opts": ["AND", "OR", "NOT", "NEAR"], "a": 0, "fb": "Operator AND mengehadkan carian kepada dokumen yang mengandungi kedua-dua kata kunci."},
+        {"q": "Portal dalam talian rasmi milik Dewan Bahasa dan Pustaka (DBP) yang menyediakan rujukan kosa kata, istilah, dan peribahasa ialah:", "opts": ["Pusat Rujukan Persuratan Melayu (PRPM)", "MySejahtera", "Portal Delima", "Portal e-Kasih"], "a": 0, "fb": "PRPM (Pusat Rujukan Persuratan Melayu) ialah portal rujukan bahasa rasmi DBP yang boleh diakses secara percuma."},
+        {"q": "Langkah pertama yang wajar diajar kepada murid sebelum mempercayai sesuatu maklumat bahasa di internet ialah:", "opts": ["Menyemak autoriti penulis, kesahihan sumber web, dan tarikh kemas kini maklumat", "Menyalin terus maklumat ke dalam karangan", "Menghantar pautan kepada semua kenalan", "Membuat andaian maklumat internet sentiasa 100% betul"], "a": 0, "fb": "Literasi digital memerlukan kemahiran menilai autoriti dan kebolehpercayaan sesuatu sumber web."},
+        {"q": "Apakah kelebihan memanfaatkan akhbar digital berbanding akhbar cetak tradisional dalam PdP?", "opts": ["Kemas kini berita berlaku secara masa nyata (real-time), interaktif dengan pautan multimedia, dan boleh diakses pada peranti mudah alih", "Akhbar digital tidak memerlukan elektrik", "Akhbar digital tidak mengandungi sebarang teks bertulis", "Akhbar digital ditulis dalam bahasa purba"], "a": 0, "fb": "Akhbar digital menawarkan akses masa nyata, multimedia interaktif, dan fleksibiliti carian arkib berita."},
+        {"q": "Etika menggunakan bahan internet dalam penulisan bahasa Melayu menuntut murid untuk:", "opts": ["Menyatakan sumber rujukan dan nama pengarang asal bagi mengelakkan plagiarisme", "Menghapuskan nama pengarang asal dan meletakkan nama sendiri", "Mengubah suai fakta supaya tidak dikenali guru", "Menjual semula artikel tersebut"], "a": 0, "fb": "Menyatakan sumber rujukan (sitasi) ialah amalan etika akademik asas untuk menghormati hak cipta intelek."}
+    ],
+    "t9": [
+        {"q": "Apakah yang dimaksudkan dengan 'Korpus Linguistik'?", "opts": ["Himpunan teks bahasa sebenar (autentik) dalam jumlah besar yang disimpan secara digital untuk dianalisis", "Kamus dwibahasa yang dicetak tebal", "Senarai markah peperiksaan murid", "Alat perakam bunyi kuno"], "a": 0, "fb": "Korpus linguistik ialah himpunan teks autentik bersaiz besar yang dikodkan secara elektronik untuk kajian bahasa."},
+        {"q": "Apakah projek pangkalan data teks sastera Melayu tradisional yang dipelopori oleh Ian Proudfoot?", "opts": ["Projek Konkordans Melayu (PKsM)", "Projek Gutenberg", "Portal DBP Digital", "Korpus Dewan Edisi Keempat"], "a": 0, "fb": "Projek Konkordans Melayu (PKsM) mengumpulkan teks-teks manuskrip dan karya sastera klasik Melayu."},
+        {"q": "Format paparan konkordans di mana perkataan sasaran dipaparkan di tengah baris bersama konteks sekitarnya dikenali sebagai:", "opts": ["Key Word In Context (KWIC)", "Peta Minda", "Carta Pai", "Indeks Terbalik"], "a": 0, "fb": "KWIC (Key Word In Context) ialah format piawai perisian konkordans untuk meneliti distribusi kata."},
+        {"q": "Gabungan perkataan seperti 'hujan lebat' dan 'rancangan rapi' yang lazim hadir bersama secara semula jadi dalam bahasa Melayu dikenali sebagai:", "opts": ["Kolokasi", "Sinonim", "Morfofonem", "Alofon"], "a": 0, "fb": "Kolokasi ialah kelaziman padanan perkataan yang hadir bersama secara berpasangan dalam korpus."},
+        {"q": "Bagaimanakah pendekatan 'Data-Driven Learning' (DDL) berasaskan korpus membantu pembelajaran tatabahasa?", "opts": ["Murid bertindak sebagai penyelidik yang menganalisis corak penggunaan kata sebenar daripada data korpus untuk memahami hukum tatabahasa", "Guru membaca jawapan dan murid hanya menghafal", "Murid tidak perlu lagi membaca buku teks", "Komputer menggantikan kehadiran guru di sekolah"], "a": 0, "fb": "DDL melatih murid meneroka pola bahasa sebenar secara induktif berasaskan data korpus autentik."}
+    ],
+    "t10": [
+        {"q": "Empat fasa dalam satu kitaran Kajian Tindakan model Kemmis & McTaggart ialah:", "opts": ["Merancang (Plan), Bertindak (Act), Memerhati (Observe), Merefleksi (Reflect)", "Menulis, Membaca, Mengira, Menyemak", "Membeli, Mengguna, Menilai, Membuang", "Mendengar, Bertutur, Menghafal, Menguji"], "a": 0, "fb": "Kitaran Kajian Tindakan mengikut urutan: Merancang → Bertindak → Memerhati → Merefleksi."},
+        {"q": "Apakah amalan utama dalam Komuniti Pembelajaran Profesional (PLC) di kalangan guru bahasa Melayu?", "opts": ["Guru berkolaborasi merancang pengajaran, melaksanakan Lesson Study, dan membuat refleksi bersama untuk meningkatkan kualiti PdP", "Guru bersaing secara individu untuk memenangi anugerah", "Guru membuat perniagaan sampingan di waktu mengajar", "Guru mengkritik kelemahan pentadbir sekolah di media sosial"], "a": 0, "fb": "PLC menekankan kolaborasi rakan sekerja (Lesson Study, Peer Coaching) bagi memurnikan amalan pedagogi."},
+        {"q": "Salah satu cabaran utama dalam pelaksanaan inovasi pengajaran di sekolah luar bandar ialah:", "opts": ["Jurang capaian internet dan kemudahan peranti digital", "Murid terlalu mahir dalam pengaturcaraan komputer", "Ketiadaan buku teks kertas", "Sekolah mempunyai terlalu banyak makmal komputer"], "a": 0, "fb": "Jurang digital dan prasarana telekomunikasi masih menjadi cabaran utama inovasi berteraskan teknologi di kawasan pedalaman."},
+        {"q": "Guru yang menggunakan gambar atau bahan digital milik orang lain dalam BBM inovasinya WAJIB:", "opts": ["Menyatakan kredit penghargaan dan mematuhi undang-undang hak cipta intelek (fair use)", "Menghapuskan tera air (watermark) pemilik asal", "Mendakwa bahan tersebut dicipta oleh dirinya sendiri sepenuhnya", "Menjual bahan tersebut di pasaran gelap"], "a": 0, "fb": "Integriti profesional menuntut guru menyatakan sumber asal dan mematuhi etika hak cipta."},
+        {"q": "Kajian Tindakan paling berfaedah kepada guru bahasa kerana:", "opts": ["Menyediakan penyelesaian praktikal berasaskan bukti terhadap masalah sebenar yang dihadapi di bilik darjahnya sendiri", "Membolehkan guru meninggalkan bilik darjah untuk bercuti", "Menjamin murid mendapat markah 100% tanpa belajar", "Merupakan syarat untuk memohon pinjaman perumahan"], "a": 0, "fb": "Kajian Tindakan berfokus kepada refleksi kendiri dan penyelesaian isu PdP kontekstual di bilik darjah guru itu sendiri."}
+    ]
+}
+
+# Flashcards: 30 items
+flashcards = [
+    {"q": "Apakah definisi inovasi dalam pendidikan bahasa?", "a": "Aplikasi idea, bahan, atau kaedah baharu secara praktikal yang menambah baik keberkesanan dan mutu proses PdP bahasa Melayu."},
+    {"q": "Bezakan kreativiti dan inovasi.", "a": "Kreativiti ialah kebolehan menjana idea baharu yang unik. Inovasi ialah penjelmaan idea tersebut ke dalam bentuk produk/amalan yang memberi impak bernilai."},
+    {"q": "Sebutkan 3 ciri utama inovasi berjaya.", "a": "1. Kebaharuan (novelty)\n2. Kebolehgunaan & kepraktisan (usability)\n3. Keberkesanan (effectiveness)"},
+    {"q": "Susun hierarki pedagogi (T-S-P-K-T).", "a": "Teori → Pendekatan → Strategi → Kaedah → Teknik."},
+    {"q": "Apakah Teori Konstruktivisme dalam PdP bahasa?", "a": "Teori bahawa murid membina makna dan pengetahuan secara aktif melalui pengalaman sebenar dan interaksi sosial, bukan penerima pasif."},
+    {"q": "Sebutkan 8 kecerdasan dalam Teori Kecerdasan Pelbagai Gardner.", "a": "Linguistik, Logik-Matematik, Visual-Ruang, Kinestetik, Muzik, Interpersonal, Intrapersonal, dan Naturalis."},
+    {"q": "Apakah teknik Teater Pembaca (Readers Theatre)?", "a": "Membaca teks/skrip drama secara ekspresif dengan intonasi dan mimik muka secara berkumpulan tanpa memerlukan pentas atau kostum rumit."},
+    {"q": "Apakah konsep Didik Hibur (Edutainment)?", "a": "Pendekatan PdP yang santai dan menyeronokkan melalui permainan bahasa, nyanyian, dan lakonan bagi mengurangkan tekanan murid."},
+    {"q": "Jelaskan teknik Kerusi Panas (Hot Seating).", "a": "Seorang murid duduk di kerusi khas melakonkan sesuatu watak dalam teks sastera dan bersedia menjawab soalan daripada rakan-rakan sekelas."},
+    {"q": "Apakah itu Gamifikasi?", "a": "Penggunaan mekanik dan elemen permainan (mata, cabaran, lencana, papan skor) dalam aktiviti pembelajaran bahasa."},
+    {"q": "Sebutkan 8 peta pemikiran i-THINK.", "a": "Peta Bulatan, Peta Buih, Peta Buih Berganda, Peta Pokok, Peta Dakap, Peta Alir, Peta Pelbagai Alir, dan Peta Titi."},
+    {"q": "Bezakan Skimming dan Scanning.", "a": "Skimming: membaca pantas untuk mendapat gambaran/tema umum.\nScanning: membaca pantas untuk mencari maklumat atau kata kunci khusus."},
+    {"q": "Apakah 4 tahap KBAT dalam Taksonomi Bloom Semakan?", "a": "Mengaplikasi, Menganalisis, Menilai, dan Mencipta."},
+    {"q": "Apakah program Akhbar Dalam Darjah (ADD)?", "a": "Pemanfaatan akhbar harian sebagai bahan bacaan autentik dalam bilik darjah untuk pengayaan kosa kata dan isu semasa."},
+    {"q": "Apakah empat mod Pembelajaran Berbantukan Komputer (PBK)?", "a": "1. Mod Tutorial\n2. Mod Latih Tubi (Drill & Practice)\n3. Mod Simulasi\n4. Mod Permainan Instruksional"},
+    {"q": "Bagaimanakah MS Word membantu penulisan proses?", "a": "Membolehkan draf ditulis, disunting bersama (track changes), dan dimurnikan secara berperingkat tanpa perlu menyalin semula dari awal."},
+    {"q": "Sebutkan 5 elemen multimedia interaktif.", "a": "1. Teks\n2. Grafik\n3. Audio\n4. Video\n5. Animasi"},
+    {"q": "Apakah Prinsip Modaliti Mayer?", "a": "Murid belajar lebih baik daripada grafik beranimasi yang disertai narasi audio berbanding grafik beranimasi yang dipadatkan dengan teks pada skrin."},
+    {"q": "Apakah Prinsip Kejelekitan (Coherence) Mayer?", "a": "Menyingkirkan perkataan, gambar, muzik latar, dan animasi hiasan yang tidak berkaitan secara langsung dengan objektif pembelajaran."},
+    {"q": "Apakah Hiperteks / Hipermedia?", "a": "Teks dan media digital yang saling berpaut membolehkan pembaca meneroka isi kandungan secara bukan linear (melalui hyperlinks)."},
+    {"q": "Apakah tiga pengendali Boolean utama untuk carian internet?", "a": "1. AND (menyempitkan carian)\n2. OR (meluaskan carian)\n3. NOT (mengecualikan kata tertentu)"},
+    {"q": "Apakah PRPM DBP?", "a": "Pusat Rujukan Persuratan Melayu — portal digital rasmi DBP untuk carian kamus, istilah, peribahasa, dan arkib bahasa Melayu."},
+    {"q": "Apakah Korpus Linguistik?", "a": "Himpunan besar teks bahasa autentik bertulis atau lisan yang disimpan secara elektronik untuk tujuan analisis saintifik nahu dan kosa kata."},
+    {"q": "Apakah Projek Konkordans Melayu (PKsM)?", "a": "Pangkalan data korpus teks manuskrip dan sastera Melayu klasik yang diasaskan oleh Ian Proudfoot di ANU."},
+    {"q": "Apakah paparan konkordans KWIC?", "a": "Key Word In Context — memaparkan kata sasaran di tengah baris diapit perkataan sebelum dan selepasnya."},
+    {"q": "Apakah itu Kolokasi bahasa?", "a": "Kelaziman atau kecenderungan beberapa perkataan untuk hadir berpasangan secara alami dalam sesuatu bahasa (cth: 'hujan lebat')."},
+    {"q": "Apakah 4 langkah Kitaran Kajian Tindakan Kemmis & McTaggart?", "a": "1. Merancang (Plan)\n2. Bertindak (Act)\n3. Memerhati (Observe)\n4. Merefleksi (Reflect)"},
+    {"q": "Apakah PLC (Professional Learning Community)?", "a": "Komuniti pembelajaran guru yang berkolaborasi secara berterusan (cth: Lesson Study, Peer Coaching) untuk meningkatkan mutu PdP murid."},
+    {"q": "Apakah isu etika dalam penciptaan inovasi pendidikan?", "a": "Menghormati hak cipta intelek, mengelakkan plagiarisme bahan orang lain, menjaga kerahsiaan data murid, dan memastikan keselamatan siber."},
+    {"q": "Apakah matlamat akhir inovasi pedagogi bahasa Melayu?", "a": "Meningkatkan penguasaan kecekapan berbahasa, penghayatan sastera, dan pembentukan sahsiah mulia murid secara holistik dan berkesan."}
+]
+
+# Mock Exam Set: 40 questions
+mock_set = {
+    "id": "set-1",
+    "title": "Mock Exam 1 (HMML5533)",
+    "desc": "40 soalan MCQ format peperiksaan akhir · Meliputi 10 topik modul",
+    "num": 1,
+    "questions": [
+        {
+            "q": "Seorang guru mencipta aplikasi kuiz berasaskan telefon pintar yang membolehkan murid mengulang kaji tatabahasa Melayu di rumah. Tindakan guru ini paling tepat dihuraikan sebagai:",
+            "opts": [
+                "Melaksanakan inovasi pedagogi berteknologi",
+                "Melakukan pembaziran masa murid",
+                "Mengabaikan sukatan pelajaran kebangsaan",
+                "Mengurangkan peranan buku teks tanpa kebenaran"
+            ],
+            "a": 0,
+            "exp": "Penggunaan aplikasi mudah alih untuk ulang kaji tatabahasa ialah contoh inovasi pedagogi berteraskan teknologi.",
+            "topic": "Inovasi dalam Pengajaran Bahasa",
+            "difficulty": "easy",
+            "cognitive": "comprehension"
+        },
+        {
+            "q": "Dalam hierarki pedagogi, rancangan menyeluruh yang merangkumi pemilihan gabungan pendekatan, kaedah, dan bahan untuk mencapai objektif pembelajaran disebut:",
+            "opts": ["Teori", "Pendekatan", "Strategi", "Teknik"],
+            "a": 2,
+            "exp": "Strategi ialah rancangan menyeluruh (kebijaksanaan) guru menggabungkan pendekatan, kaedah, dan bahan.",
+            "topic": "Perkaitan Inovasi dengan Teori, Strategi, Pendekatan, Kaedah dan Teknik",
+            "difficulty": "medium",
+            "cognitive": "recall"
+        },
+        {
+            "q": "Apakah kelebihan utama teknik 'Teater Pembaca' dalam memulihkan murid yang lemah membaca?",
+            "opts": [
+                "Murid tidak perlu menghafal dialog sebaliknya membaca skrip secara ekspresif dengan sokongan rakan sekumpulan, mengurangkan rasa rendah diri",
+                "Murid dibenarkan tidur semasa orang lain membaca",
+                "Guru tidak perlu berada di dalam bilik darjah",
+                "Skrip drama tidak mengandungi sebarang perkataan sukar"
+            ],
+            "a": 0,
+            "exp": "Teater pembaca membina keyakinan kerana murid memegang skrip dan membaca bersama sokongan rakan sebaya.",
+            "topic": "Inovasi Teknik Pengajaran Bahasa",
+            "difficulty": "medium",
+            "cognitive": "comprehension"
+        },
+        {
+            "q": "Peta pemikiran i-THINK yang paling sesuai digunakan untuk menyenaraikan punca-punca dan kesan-kesan kejadian banjir kilat dalam penulisan karangan ialah:",
+            "opts": ["Peta Pelbagai Alir (Multi-Flow Map)", "Peta Bulatan", "Peta Dakap", "Peta Titi"],
+            "a": 0,
+            "exp": "Peta Pelbagai Alir digunakan khas untuk menganalisis hubungan sebab (punca) dan akibat (kesan).",
+            "topic": "Inovasi dan Kemahiran Bernilai Tambah",
+            "difficulty": "easy",
+            "cognitive": "application"
+        },
+        {
+            "q": "Program 'Akhbar Dalam Darjah' (ADD) memberi sumbangan besar kepada pembelajaran bahasa kerana:",
+            "opts": [
+                "Menyediakan laras bahasa autentik dan isu semasa yang merangsang wacana pemikiran murid",
+                "Akhbar lebih murah daripada membeli pemadam pensel",
+                "Akhbar tidak mempunyai kesalahan ejaan langsung",
+                "Murid boleh membawa pulang akhbar untuk dijual"
+            ],
+            "a": 0,
+            "exp": "ADD membekalkan teks autentik dunia sebenar yang membolehkan murid melihat fungsi bahasa dalam masyarakat.",
+            "topic": "Inovasi Penggunaan Bahan Konvensional",
+            "difficulty": "easy",
+            "cognitive": "comprehension"
+        },
+        {
+            "q": "Manakah antara berikut menunjukkan aplikasi perisian Microsoft Word yang menepati pendekatan 'Penulisan Proses'?",
+            "opts": [
+                "Murid menulis draf, berkongsi fail untuk penyuntingan rakan sebaya melalui fungsi komentar, dan memurnikan draf akhir secara teratur",
+                "Guru menyalin rencana internet dan mencetaknya untuk murid",
+                "Murid menaip perkataan yang sama sebanyak 100 kali sebagai denda",
+                "Murid menukar warna fon setiap perkataan tanpa membaca isi karangan"
+            ],
+            "a": 0,
+            "exp": "Penulisan proses menekankan peringkat mendraf, menyemak (review), menyunting, dan memurnikan karangan.",
+            "topic": "Komputer dalam Pengajaran Bahasa",
+            "difficulty": "medium",
+            "cognitive": "application"
+        },
+        {
+            "q": "Menurut 'Prinsip Kejelekitan' (Coherence Principle) Richard Mayer, seorang pereka bentuk bahan multimedia pembelajaran bahasa Melayu sepatutnya:",
+            "opts": [
+                "Menyingkirkan audio muzik latar yang bising dan gambar hiasan yang tidak menyumbang kepada objektif pengajaran",
+                "Memasukkan seberapa banyak kesan bunyi letupan untuk menarik minat",
+                "Memenuhi seluruh skrin dengan animasi kartun bergerak",
+                "Menggunakan 10 jenis fon tulisan berbeza dalam satu slaid"
+            ],
+            "a": 0,
+            "exp": "Prinsip kejelekitan menegaskan bahawa unsur luar yang tidak relevan akan membebankan kognitif memori kerja murid.",
+            "topic": "Inovasi Bahan Multimedia",
+            "difficulty": "medium",
+            "cognitive": "analysis"
+        },
+        {
+            "q": "Dalam enjin carian internet, apakah hasil carian jika pengguna menaip: \"peribahasa Melayu\" AND SPM?",
+            "opts": [
+                "Hanya laman sesawang yang mengandungi kedua-dua frasa 'peribahasa Melayu' dan perkataan 'SPM'",
+                "Laman yang hanya mengandungi perkataan SPM tanpa peribahasa",
+                "Semua laman yang mengandungi perkataan Melayu sahaja",
+                "Enjin carian akan menyekat pengguna daripada mengakses internet"
+            ],
+            "a": 0,
+            "exp": "Operator AND memastikan dokumen hasil carian mesti mengandungi kedua-dua istilah secara serentak.",
+            "topic": "Inovasi Sumber Internet",
+            "difficulty": "easy",
+            "cognitive": "application"
+        },
+        {
+            "q": "Format paparan KWIC (Key Word In Context) dalam perisian analisis pangkalan data korpus linguistik bermaksud:",
+            "opts": [
+                "Perkataan yang dicari dipaparkan di tengah baris bersama konteks kata di sebelah kiri dan kanannya",
+                "Semua perkataan disusun mengikut abjad terbalik",
+                "Perkataan yang salah dieja akan diwarnakan merah",
+                "Teks diterjemahkan terus ke dalam bahasa Inggeris"
+            ],
+            "a": 0,
+            "exp": "KWIC membariskan kata kunci di tengah skrin bagi memudahkan penganalisis melihat corak kolokasi sekelilingnya.",
+            "topic": "Pangkalan Data",
+            "difficulty": "medium",
+            "cognitive": "comprehension"
+        },
+        {
+            "q": "Dalam kitaran Kajian Tindakan, fasa di mana guru mengumpul data dan maklumat mengenai kesan intervensi inovasi yang dilaksanakan ialah fasa:",
+            "opts": ["Merancang (Plan)", "Bertindak (Act)", "Memerhati (Observe)", "Merefleksi (Reflect)"],
+            "a": 2,
+            "exp": "Fasa Memerhati (Observe) melibatkan proses pengumpulan data pemerhatian, skor ujian, atau soal selidik.",
+            "topic": "Inovasi dan Sumber Manusia",
+            "difficulty": "easy",
+            "cognitive": "recall"
+        }
+    ]
+}
+
+# Add remaining 30 questions to reach 40 complete questions
+more_questions = [
+    # Topic 1-3
+    {"q": "Konsep 'kebolehgunaan' (usability) dalam menilai sesuatu inovasi bilik darjah merujuk kepada:", "opts": ["Kemudahan untuk guru dan murid mengendalikan inovasi tersebut dalam realiti sekolah harian", "Harga perisian yang paling mahal di pasaran", "Inovasi yang hanya boleh digunakan oleh pakar IT", "Kecanggihan visual tanpa mengira kos"], "a": 0, "exp": "Kebolehgunaan bermakna praktikal, mesra pengguna, dan boleh dioperasikan tanpa kesulitan besar.", "topic": "Inovasi dalam Pengajaran Bahasa", "difficulty": "easy", "cognitive": "comprehension"},
+    {"q": "Seorang guru menggabungkan kemahiran lakonan dengan teks sastera klasik Melayu di mana murid melakonkan babak pertarungan Hang Tuah dan Hang Jebat. Teknik ini tergolong dalam:", "opts": ["Teknik Drama / Main Peranan", "Teknik Dikte Berpusat", "Teknik Latih Tubi Pola", "Teknik Terjemahan"], "a": 0, "exp": "Aktiviti lakonan babak sastera ialah aplikasi teknik drama.", "topic": "Inovasi Teknik Pengajaran Bahasa", "difficulty": "easy", "cognitive": "application"},
+    {"q": "Apakah faedah pedagogi menggabungkan teknik Didik Hibur (nyanyian syair dan pantun) dalam pengajaran tatabahasa?", "opts": ["Menurunkan tahap kebimbangan bahasa (language anxiety) dan memperkukuh ingatan murid", "Memendekkan tempoh silibus pelajaran", "Menggantikan kerja rumah sepenuhnya", "Memastikan murid tidak bersuara di dalam kelas"], "a": 0, "exp": "Didik hibur merangsang emosi positif yang memudahkan penerimaan konsep nahu.", "topic": "Inovasi Teknik Pengajaran Bahasa", "difficulty": "medium", "cognitive": "comprehension"},
+    # Topic 4-6
+    {"q": "Apakah perbezaan utama antara 'skimming' dan 'scanning' dalam kemahiran belajar bahasa?", "opts": ["Skimming mencari idea umum; scanning mencari fakta atau maklumat khusus tertentu", "Skimming untuk membaca perlahan; scanning untuk membaca teks sastera", "Skimming menggunakan komputer; scanning menggunakan buku kertas", "Tiada sebezaan antara keduanya"], "a": 0, "exp": "Skimming membaca untuk dapatkan intipati umum; scanning mencari maklumat terperinci tertentu (cth: tarikh, nama tokoh).", "topic": "Inovasi dan Kemahiran Bernilai Tambah", "difficulty": "easy", "cognitive": "recall"},
+    {"q": "Peta pemikiran i-THINK yang berbentuk hierarki dan sesuai untuk mengelaskan golongan kata kepada Kata Nama, Kata Kerja, Kata Adjektif, dan Kata Tugas ialah:", "opts": ["Peta Pokok (Tree Map)", "Peta Alir", "Peta Titi", "Peta Bulatan"], "a": 0, "exp": "Peta Pokok digunakan khas untuk klasifikasi atau pengelasan kategori.", "topic": "Inovasi dan Kemahiran Bernilai Tambah", "difficulty": "easy", "cognitive": "application"},
+    {"q": "Pemanfaatan kod respons pantas (QR Code) pada lembaran kerja bahasa Melayu membolehkan murid:", "opts": ["Mengakses audio sebutan baku atau video ulasan tambahan dengan mengimbas kod menggunakan peranti pintar", "Menukar markah peperiksaan secara rahsia", "Membeli barangan runcit di kantin", "Menghapuskan tugasan membaca"], "a": 0, "exp": "Kod QR menghubungkan bahan cetak statik dengan sumber multimedia dinamik dalam talian.", "topic": "Inovasi Penggunaan Bahan Konvensional", "difficulty": "easy", "cognitive": "comprehension"},
+    {"q": "Perisian hamparan elektronik (MS Excel / Google Sheets) boleh diinovasikan dalam PdP bahasa Melayu untuk:", "opts": ["Menyusun bank perbendaharaan kata, formula padanan perkataan, dan carta kekerapan bacaan murid", "Menaip esei panjang 10 muka surat", "Merakam video lakonan drama", "Mengedit lagu koir sekolah"], "a": 0, "exp": "Excel berkesan untuk menyusun leksikon, rekod kosa kata, dan statistik kemajuan bacaan.", "topic": "Komputer dalam Pengajaran Bahasa", "difficulty": "medium", "cognitive": "application"},
+    # Topic 7-8
+    {"q": "Berdasarkan Teori Kognitif Pembelajaran Multimedia Mayer, konsep 'saluran dual' (dual-channel) menyatakan bahawa:", "opts": ["Otak manusia mempunyai saluran berasingan untuk memproses maklumat visual (mata) dan maklumat auditori/verbal (telinga)", "Manusia hanya boleh belajar melalui satu deria pada satu masa", "Minda memproses semua gambar sebagai teks", "Kapasiti memori manusia tidak mempunyai sebarang had"], "a": 0, "exp": "Saluran dual menyatakan maklumat auditori/narasi dan visual/grafik diproses melalui dua saluran berasingan di otak.", "topic": "Inovasi Bahan Multimedia", "difficulty": "hard", "cognitive": "analysis"},
+    {"q": "Apakah kelebihan utama navigasi bukan linear (hipermedia / hyperlinks) dalam modul pembelajaran kendiri bahasa Melayu?", "opts": ["Murid boleh meneroka topik pembelajaran mengikut minat, keperluan, dan kadar keupayaan kendiri (self-paced)", "Semua murid dipaksa membuka muka surat yang sama pada waktu yang sama", "Guru tidak perlu menyediakan sebarang bahan pengajaran", "Modul tidak memerlukan sebarang teks bertulis"], "a": 0, "exp": "Hipermedia menyokong pembelajaran kendiri fleksibel mengikut rentak pemahaman murid.", "topic": "Inovasi Bahan Multimedia", "difficulty": "medium", "cognitive": "comprehension"},
+    {"q": "Apakah kegunaan utama portal Pusat Rujukan Persuratan Melayu (PRPM) DBP kepada guru dan murid?", "opts": ["Menyemak ejaan baku, maksud perkataan dalam pelbagai kamus DBP, istilah rasmi, dan peribahasa Melayu secara sahih", "Membeli tiket bas antara negeri", "Mendengar muzik hiburan antarabangsa", "Bermain permainan dalam talian"], "a": 0, "exp": "PRPM ialah pangkalan data rujukan bahasa Melayu rasmi berautoriti tinggi.", "topic": "Inovasi Sumber Internet", "difficulty": "easy", "cognitive": "recall"},
+    # Topic 9-10
+    {"q": "Apakah yang dimaksudkan dengan istilah 'kolokasi' dalam linguistik korpus?", "opts": ["Kecenderungan lazim dua atau lebih perkataan untuk hadir berdampingan secara alami dalam teks bahasa (cth: 'usaha gigih')", "Kesalahan ejaan yang berulang", "Perkataan yang dipinjam daripada bahasa Inggeris", "Nama pengarang sesuatu artikel"], "a": 0, "exp": "Kolokasi ialah kelaziman padanan kata berdampingan dalam bahasa semula jadi.", "topic": "Pangkalan Data", "difficulty": "medium", "cognitive": "recall"},
+    {"q": "Apakah peranan 'Lesson Study' dalam Komuniti Pembelajaran Profesional (PLC) guru bahasa Melayu?", "opts": ["Sekumpulan guru bersama-sama merancang rancangan pengajaran, seorang guru mengajar sambil diperhati rakan sekerja, dan diikuti sesi refleksi bersama", "Guru menduduki peperiksaan tatabahasa setiap minggu", "Guru menyemak buku latihan murid secara bersendirian di rumah", "Pengetua memarahi guru yang muridnya gagal"], "a": 0, "exp": "Lesson study ialah kitaran kolaboratif: Rancang → Mengajar & Memerhati → Refleksi & Pemurnian.", "topic": "Inovasi dan Sumber Manusia", "difficulty": "medium", "cognitive": "comprehension"},
+    {"q": "Dalam etika inovasi digital, apakah langkah wajar sekiranya guru ingin menyebarkan modul yang mengandungi gambar berhak cipta?", "opts": ["Memohon kebenaran pemilik hak cipta atau menggunakan imej berlesen Creative Commons / domain awam dengan menyatakan sumber sitasi", "Memadam nama pemilik asal dan meletakkan nama sendiri", "Menjual modul tersebut untuk keuntungan peribadi", "Mengabaikan hak cipta kerana guru kebal undang-undang"], "a": 0, "exp": "Integriti profesional menuntut penghormatan terhadap harta intelek dan penggunaan bahan berlesen sah.", "topic": "Inovasi dan Sumber Manusia", "difficulty": "medium", "cognitive": "application"},
+    # Additional 17 questions
+    {"q": "Apakah maksud pembelajaran teradun (blended learning)?", "opts": ["Gabungan pembelajaran bersemuka secara fizikal di bilik darjah dengan pembelajaran dalam talian (e-pembelajaran)", "Pembelajaran menggunakan dua bahasa serentak dalam satu ayat", "Mencampurkan murid sekolah rendah dan menengah dalam satu kelas", "Belajar sambil mendengar lagu tanpa buku"], "a": 0, "exp": "Blended learning menggabungkan mod interaksi fizikal dengan aktiviti digital dalam talian.", "topic": "Inovasi dalam Pengajaran Bahasa", "difficulty": "easy", "cognitive": "comprehension"},
+    {"q": "Mengapakah kaedah inkuiri-penemuan dianggap inovatif dalam pengajaran tatabahasa?", "opts": ["Kerana murid diberi peluang meneroka, menganalisis contoh bahasa autentik, dan menemui rumus nahu secara berdikari", "Kerana murid hanya perlu mendengar kuliah guru sepanjang masa", "Kerana murid tidak perlu berfikir untuk mencari jawapan", "Kerana kaedah ini tidak menggunakan sebarang buku"], "a": 0, "exp": "Inkuiri mengalihkan peranan murid daripada penerima pasif kepada peneroka aktif sistem bahasa.", "topic": "Perkaitan Inovasi dengan Teori, Strategi, Pendekatan, Kaedah dan Teknik", "difficulty": "medium", "cognitive": "comprehension"},
+    {"q": "Aktiviti 'Roda Impian Kosa Kata' merupakan contoh inovasi yang menerapkan elemen:", "opts": ["Gamifikasi didik hibur", "Ujian bertulis formal", "Kaedah terjemahan langsung", "Hafalan kamus tradisional"], "a": 0, "exp": "Roda impian ialah gamifikasi yang meningkatkan keterlibatan dan daya saing sihat murid.", "topic": "Inovasi Teknik Pengajaran Bahasa", "difficulty": "easy", "cognitive": "application"},
+    {"q": "Peta pemikiran i-THINK yang sesuai untuk menunjukkan urutan langkah-langkah penyediaan sesuatu masakan dalam karangan autobiografi ialah:", "opts": ["Peta Alir (Flow Map)", "Peta Buih", "Peta Pokok", "Peta Dakap"], "a": 0, "exp": "Peta Alir digunakan khusus untuk menunjukkan proses berurutan atau kronologi langkah.", "topic": "Inovasi dan Kemahiran Bernilai Tambah", "difficulty": "easy", "cognitive": "application"},
+    {"q": "Bagaimanakah teknik 'Scanning' membantu murid semasa menjawab soalan pemahaman petikan?", "opts": ["Murid dapat mencari maklumat spesifik seperti nama tokoh atau tahun peristiwa dengan cepat tanpa membaca keseluruhan teks", "Murid membaca novel dari kulit ke kulit dalam masa seminit", "Murid menyalin soalan semula tanpa jawapan", "Murid menghafal makna semua perkataan dalam teks"], "a": 0, "exp": "Scanning membolehkan mata mengimbas laju mencari petunjuk kata kunci khusus dalam teks.", "topic": "Inovasi dan Kemahiran Bernilai Tambah", "difficulty": "medium", "cognitive": "application"},
+    {"q": "Aktiviti memotong artikel akhbar dan menampalnya di dalam buku skrap dengan ulasan murid merupakan contoh pemanfaatan:", "opts": ["Bahan autentik konvensional secara kreatif", "Perisian pangkalan data korpus canggih", "Kecerdasan buatan generatif", "Buku teks digital Kementerian"], "a": 0, "exp": "Buku skrap berasaskan keratan akhbar memanfaatkan bahan cetak konvensional untuk pengayaan bahasa.", "topic": "Inovasi Penggunaan Bahan Konvensional", "difficulty": "easy", "cognitive": "comprehension"},
+    {"q": "Apakah tujuan penggunaan fungsi 'Komen' (Comments) dan 'Track Changes' dalam pemprosesan perkataan semasa latihan mengarang?", "opts": ["Membolehkan guru atau rakan memberi maklum balas formatif yang membina terhadap struktur ayat dan kosa kata murid", "Memadamkan tulisan murid secara kekal", "Menghalang murid daripada menaip karangan", "Menukar format fail menjadi fail lagu"], "a": 0, "exp": "Track changes dan komen membolehkan proses perbincangan dan pemurnian draf penulisan dijalankan secara telus.", "topic": "Komputer dalam Pengajaran Bahasa", "difficulty": "medium", "cognitive": "application"},
+    {"q": "Manakah antara berikut BUKAN format fail audio digital yang lazim digunakan dalam BBM multimedia?", "opts": ["MP3", "WAV", "AAC", "DOCX"], "a": 3, "exp": "DOCX ialah format dokumen teks pemprosesan perkataan, bukan fail audio.", "topic": "Inovasi Bahan Multimedia", "difficulty": "easy", "cognitive": "recall"},
+    {"q": "Prinsip 'Kehampiran Ruang' (Spatial Contiguity Principle) Mayer menyarankan agar:", "opts": ["Teks penerangan diletakkan berdekatan dengan gambar rajah yang dirujuk pada skrin pembelajaran", "Teks diletakkan di halaman pertama manakala gambar di halaman terakhir", "Semua gambar disembunyikan di bawah butang rahsia", "Murid duduk rapat-rapat di makmal komputer"], "a": 0, "exp": "Prinsip Spatial Contiguity menggesa teks dan grafik yang saling berkait diletakkan bersebelahan untuk kurangkan beban pencarian visual.", "topic": "Inovasi Bahan Multimedia", "difficulty": "hard", "cognitive": "analysis"},
+    {"q": "Apakah tanda petikan (\"\") berfungsi dalam carian enjin internet?", "opts": ["Mencari frasa tepat mengikut urutan perkataan yang ditaip (exact phrase match)", "Membatalkan carian internet", "Menterjemah teks ke bahasa Melayu secara automatik", "Menyimpan laman sesawang ke dalam pemacu kilat"], "a": 0, "exp": "Tanda petikan mencari padanan tepat bagi rangkaian perkataan yang dimasukkan.", "topic": "Inovasi Sumber Internet", "difficulty": "medium", "cognitive": "comprehension"},
+    {"q": "Mengapakah pangkalan data korpus penting dalam penyusunan kamus dan buku tatabahasa moden?", "opts": ["Kerana korpus membekalkan bukti kekerapan dan penggunaan sebenar perkataan dalam konteks masyarakat masa kini", "Kerana korpus membolehkan buku dicetak dengan dakwat emas", "Kerana korpus menghapuskan tatabahasa Melayu lama", "Kerana ia dihasilkan oleh satu orang pengarang sahaja tanpa semakan"], "a": 0, "exp": "Leksikografi moden bergantung pada korpus untuk mengesan kekerapan dan perubahan makna kata dalam bahasa hidup.", "topic": "Pangkalan Data", "difficulty": "medium", "cognitive": "comprehension"},
+    {"q": "Dalam PLC guru bahasa Melayu, sesi 'Peer Coaching' (Bimbingan Rakan Sekerja) bertujuan untuk:", "opts": ["Memberikan bimbingan profesional dan maklum balas konstruktif daripada rakan sekerja untuk memantapkan pedagogi guru", "Mencari kesalahan guru baharu untuk dikenakan tindakan tatatertib", "Menggantikan jawatan pegawai Pejabat Pendidikan Daerah", "Meminta rakan mengajar kelas sendiri"], "a": 0, "exp": "Peer coaching ialah proses bimbingan kolaboratif antara rakan sejawat bagi mempertingkatkan amalan mengajar.", "topic": "Inovasi dan Sumber Manusia", "difficulty": "medium", "cognitive": "comprehension"},
+    {"q": "Sebelum sesuatu inovasi BBM disebarkan secara meluas ke sekolah lain, langkah paling wajar dilakukan ialah:", "opts": ["Menjalankan ujian rintis (pilot test) dan kajian keberkesanan terhadap kumpulan murid sasaran", "Menjual inovasi tersebut kepada orang ramai", "Mencetak sijil penghargaan untuk diri sendiri", "Memaksa semua guru lain menggunakannya tanpa penerangan"], "a": 0, "exp": "Ujian rintis membuktikan kebolehgunaan dan keberkesanan inovasi sebelum disyorkan kepada khalayak ramai.", "topic": "Inovasi dan Sumber Manusia", "difficulty": "medium", "cognitive": "analysis"},
+    {"q": "Penerapan elemen Kecerdasan Muzikal (Gardner) dalam pengajaran puisi Melayu boleh dilaksanakan melalui aktiviti:", "opts": ["Melagukan syair, berbalas pantun berirama, dan mendeklamasikan sajak dengan iringan muzik latar", "Menyalin teks sajak seratus kali dalam buku latihan", "Mengira bilangan huruf vokal dalam rangkap syair", "Menghafal riwayat hidup pencipta sajak tanpa membaca puisinya"], "a": 0, "exp": "Irama, lagu syair, dan muzik latar memanfaatkan kecerdasan muzikal untuk penghayatan sastera.", "topic": "Inovasi dan Kemahiran Bernilai Tambah", "difficulty": "easy", "cognitive": "application"},
+    {"q": "Apakah kesan positif inovasi pengajaran bahasa terhadap motivasi intrinsik murid?", "opts": ["Murid berasa seronok, ingin tahu, dan terdorong untuk belajar kerana minat mendalam terhadap aktiviti bermakna", "Murid belajar semata-mata kerana takut dihukum guru", "Murid hanya mahukan ganjaran wang tunai", "Murid tidak mahu lagi membaca buku"], "a": 0, "exp": "Motivasi intrinsik lahir daripada rasa seronok, kepuasan kognitif, dan minat kendiri terhadap pembelajaran.", "topic": "Inovasi dalam Pengajaran Bahasa", "difficulty": "easy", "cognitive": "comprehension"},
+    {"q": "Model pembelajaran koperatif 'Jigsaw' beroperasi dengan cara:", "opts": ["Setiap ahli kumpulan menjadi pakar bagi satu bahagian subtopik, berbincang dalam kumpulan pakar, dan kembali mengajar ahli kumpulan asalnya", "Murid menyusun teka-teki gambar tanpa bercakap", "Guru mengajar seorang murid sahaja manakala yang lain menonton", "Murid bersaing secara individu untuk menyiapkan latihan"], "a": 0, "exp": "Teknik Jigsaw mewujudkan kebergantungan positif di mana setiap murid bertanggungjawab mengajar rakan sekumpulannya.", "topic": "Perkaitan Inovasi dengan Teori, Strategi, Pendekatan, Kaedah dan Teknik", "difficulty": "medium", "cognitive": "comprehension"},
+    {"q": "Tujuan utama guru melaksanakan Kajian Tindakan dalam bilik darjah ialah:", "opts": ["Menambah baik amalan pengajaran kendiri dan menyelesaikan masalah pembelajaran murid secara saintifik dan berterusan", "Mendapatkan kenaikan pangkat secara automatik", "Mengelak daripada mengajar sukatan peperiksaan", "Menulis tesis untuk dijual kepada pelajar kolej"], "a": 0, "exp": "Kajian tindakan bermatlamat mempertingkatkan kualiti amalan pengajaran guru dan hasil pembelajaran murid.", "topic": "Inovasi dan Sumber Manusia", "difficulty": "easy", "cognitive": "comprehension"}
+]
+
+mock_set["questions"].extend(more_questions)
+
+data_hmml5533 = {
+    "notes": notes,
+    "quizzes": quizzes,
+    "flashcards": flashcards,
+    "sets": [mock_set]
+}
+
+with open("scripts/hmml5533_data.json", "w", encoding="utf-8") as f:
+    json.dump(data_hmml5533, f, indent=2, ensure_ascii=False)
+
+print(f"HMML5533 generated: {len(notes)} topics, {sum(len(q) for q in quizzes.values())} quiz questions, {len(flashcards)} flashcards, {len(mock_set['questions'])} exam questions.")

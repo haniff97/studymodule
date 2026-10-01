@@ -1,0 +1,85 @@
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  password_hash TEXT NOT NULL,
+  display_name TEXT NOT NULL,
+  role TEXT NOT NULL DEFAULT 'user',
+  xp INTEGER NOT NULL DEFAULT 0,
+  streak INTEGER NOT NULL DEFAULT 1,
+  level INTEGER NOT NULL DEFAULT 1,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE TABLE subjects (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  code TEXT UNIQUE NOT NULL,
+  title_ms TEXT NOT NULL, title_en TEXT NOT NULL,
+  icon TEXT NOT NULL DEFAULT 'route'
+);
+CREATE TABLE topics (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  subject_id INTEGER NOT NULL REFERENCES subjects(id),
+  code TEXT NOT NULL,
+  title_ms TEXT NOT NULL, title_en TEXT NOT NULL
+);
+CREATE TABLE notes (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  topic_id INTEGER NOT NULL REFERENCES topics(id),
+  section_order INTEGER NOT NULL,
+  heading TEXT NOT NULL,
+  content_html TEXT NOT NULL,
+  is_fokus INTEGER NOT NULL DEFAULT 0
+);
+CREATE TABLE sets (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  subject_id INTEGER NOT NULL REFERENCES subjects(id),
+  code TEXT NOT NULL,
+  title_ms TEXT NOT NULL, title_en TEXT NOT NULL,
+  difficulty TEXT NOT NULL DEFAULT 'medium',
+  num_questions INTEGER NOT NULL DEFAULT 0
+);
+CREATE TABLE questions (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  set_id INTEGER NOT NULL REFERENCES sets(id),
+  topic_id INTEGER REFERENCES topics(id),
+  q TEXT NOT NULL,
+  opts_json TEXT NOT NULL,
+  correct INTEGER NOT NULL,
+  explanation TEXT NOT NULL DEFAULT '',
+  difficulty TEXT NOT NULL DEFAULT 'medium',
+  cognitive TEXT NOT NULL DEFAULT ''
+);
+CREATE TABLE quizzes (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  topic_id INTEGER NOT NULL REFERENCES topics(id),
+  q TEXT NOT NULL,
+  opts_json TEXT NOT NULL,
+  correct INTEGER NOT NULL,
+  explanation TEXT NOT NULL DEFAULT ''
+);
+CREATE TABLE flashcards (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  subject_id INTEGER NOT NULL REFERENCES subjects(id),
+  topic_id INTEGER REFERENCES topics(id),
+  front TEXT NOT NULL, back TEXT NOT NULL
+);
+CREATE TABLE tips (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  title_ms TEXT NOT NULL, title_en TEXT NOT NULL,
+  body_ms TEXT NOT NULL, body_en TEXT NOT NULL,
+  tag TEXT NOT NULL DEFAULT 'exam'
+);
+CREATE TABLE progress (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL REFERENCES users(id),
+  topic_id INTEGER NOT NULL REFERENCES topics(id),
+  completed INTEGER NOT NULL DEFAULT 0,
+  best_score INTEGER NOT NULL DEFAULT 0,
+  updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+  UNIQUE(user_id, topic_id)
+);
+CREATE TABLE sessions (
+  sid TEXT PRIMARY KEY,
+  user_id INTEGER NOT NULL,
+  expires_at TEXT NOT NULL
+);
