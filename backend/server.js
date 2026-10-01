@@ -595,6 +595,6 @@ app.use(express.static(distDir))
 app.use('/assets', (_req, res) => res.status(404).type('text/plain').send('Asset not found'))
 app.get(/^(?!\/api).*/, (_req, res) => res.sendFile(path.join(distDir, 'index.html')))
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 5008
 app.listen(PORT, () => console.log(`API listening on http://localhost:${PORT}`))
 
